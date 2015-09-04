@@ -14,6 +14,7 @@
 #! FME_BUILD_NUM="15515"
 #! WORKSPACE_VERSION="1"
 #! FME_DOCUMENT_GUID="52e9883d-6c95-44af-9871-e5a0e6c18130"
+#! LAST_SAVE_DATE="2015-09-03T13:51:52"
 #! END_TCL=""
 #! PASSWORD=""
 #! SOURCE_ROUTING_FILE=""
@@ -1610,4 +1611,3 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYP
 
 # -------------------------------------------------------------------------
 GEODATABASE_SDE_2_DEF coagis.bc_address   geodb_type                   geodb_point   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         "$(GEODB_CONFIG_KEYWORD)"   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   objectid                     integer   x                            double   y                            double   address                      char(40)   number                       integer   apt                          char(4)   prefix                       char(2)   street_name                  char(30)   street_type                  char(4)   postdirection                char(2)   civicaddress_id              double   location_type                integer   change_date                  date   city                         char(4)   zipcode                      integer   maximo_type                  char(30)   maximo_seq_num               integer   asset_code                   char(50)   mrc                          char(8)   pinnum                       char(15)   truckday                     char(10)   centerline_id                double   location_id                  double   parent_location_id           double
-
