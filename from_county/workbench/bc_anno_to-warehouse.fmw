@@ -1,0 +1,1376 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\FME\fme.exe C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\from_county\workbench\bc_anno_to-warehouse.fmw
+#          --SourceDataset_SDE30_3 "bun"
+#          --DestDataset_POSTGIS_3 "coa-gis-warehouse1b"
+#    
+#    
+#! SHOW_ANNOTATIONS="true"
+#! LAST_SAVE_BUILD="FME(R) 2015.1.1.0 (20150715 - Build 15515 - WIN32)"
+#! END_PYTHON=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! LAST_SAVE_DATE="2015-09-04T12:10:00"
+#! ATTR_TYPE_ENCODING="SDF"
+#! DOC_TOP_LEFT="320 -349.119"
+#! BEGIN_TCL=""
+#! LOG_MAX_PRECISION="Yes"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! WORKSPACE_VERSION="1"
+#! FME_DOCUMENT_GUID="81aab64c-c8d4-4e08-b173-19fec64c3d16"
+#! CATEGORY=""
+#! HISTORY=""
+#! FME_SERVER_SERVICES=""
+#! USAGE=""
+#! VIEW_POSITION="0 -176.472"
+#! DOC_EXTENTS="1225.17 8.11901"
+#! DESTINATION_ROUTING_FILE=""
+#! SOURCE_ROUTING_FILE=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! FME_DOCUMENT_PRIORGUID="e84df187-e7e9-4750-979a-f420a48b2041,99801043-08d1-4efd-844e-a47b3862ade4"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
+#! PASSWORD=""
+#! ZOOM_SCALE="68"
+#! SHOW_INFO_NODES="true"
+#! LOG_FILE="\\coa-gisdb-msql\GIS_SCRIPT_JOBS\FME\BuncombeImport\LOGS\BC_Property_COAGIS_FME.log"
+#! REQUIREMENTS=""
+#! FME_BUILD_NUM="15515"
+#! REQUIREMENTS_KEYWORD=""
+#! DESTINATION="NONE"
+#! TITLE=""
+#! SOURCE="NONE"
+#! MAX_LOG_FEATURES="200"
+#! DESCRIPTION=""
+#! IGNORE_READER_FAILURE="No"
+#! BEGIN_PYTHON=""
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! END_TCL=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="SDE30"
+#! DATASET="$(SourceDataset_SDE30_3)"
+#! KEYWORD="SDE30_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="SDE_CONFIG_KEYWORD {SDE_CONFIG_KEYWORD} SDE_LAYER {SDE_COLUMN_NAME} SDE_PRECISION {SDE_PRECISION} SDE_GRID{0} {SDE_GRID{0}} SDE_GRID{1} {SDE_GRID{1}} SDE_GRID{2} {SDE_GRID{2}} SDE_DIMENSION {SDE_DIMENSION} SDE_MEASURED {SDE_MEASURED} SDE_ANNOTATED {SDE_ANNOTATED} SDE_AREA {SDE_AREA} SDE_LINE {SDE_LINE} SDE_POINT {SDE_POINT} SDE_SIMPLE_LINE {SDE_SIMPLE_LINE} SDE_NIL {SDE_NIL} SDE_MULTIPART {SDE_MULTIPART} SDE_XORIGIN {SDE_XORIGIN} SDE_YORIGIN {SDE_YORIGIN} SDE_SCALE {SDE_SCALE} SDE_ZORIGIN {SDE_ZORIGIN} SDE_ZSCALE {SDE_ZSCALE} SDE_MEASURED_ORIGIN {SDE_MEASURED_ORIGIN} SDE_MEASURED_SCALE {SDE_MEASURED_SCALE}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="sde30_num_points integer sde30_text_y_leader char(50) fme_primary_axis double sde30_text_z_location char(50) fme_secondary_axis double sde30_text_x_offset double fme_fill_color char(50) sde30_text_z_leader char(50) sde30_text_x double sde30_text_y double sde30_text_z double multi_reader_type char(50) fme_text_size double sde30_text_symbol integer sde30_text_size double multi_reader_keyword char(50) sde30_rotation double multi_reader_id integer fme_start_angle double sde30_type char(50) sde30_measures char(50) fme_sweep_angle double fme_basename char(50) sde30_text_y_location char(50) sde30_major_axis double sde30_text_x_leader char(50) fme_text_string char(50) fme_rotation double sde30_radius double fme_type char(50) fme_geometry fme_char(50) multi_reader_full_id integer sde30_text_y_offset double fme_feature_type char(50) fme_dataset char(50) SE_ROW_ID integer sde30_text_gap_ratio double sde30_text_string char(50) sde30_text_x_location char(50) sde30_minor_axis double sde30_justification char(50) sde30_text_level integer fme_color char(50)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DATABASE"
+#! GENERATE_FME_BUILD_NUM="6501"
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! MIN_FEATURES=""
+#! MAX_FEATURES=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="SDE30_IN_SEARCH_ENVELOPE_MINX SDE30_IN_SEARCH_ENVELOPE_MINY SDE30_IN_SEARCH_ENVELOPE_MAXX SDE30_IN_SEARCH_ENVELOPE_MAXY WHERE SDE30_IN_CLIP_TO_ENVELOPE _IN_SDE3SEARCH_ENVELOPE_COORDINATE_SYSTEM _IN_SDE3SearchMethod _IN_SDE3RemoveTableQualifier _IN_SDE3SearchOrder _IN_SDE3SearchMethodFilter _IN_SDE3PersistentConnection _IN_SDE3SearchFeature _IN_SDE3ChildVersionName _TRANSACTION_INTERVAL _ADD_LAYERS_TO_EXISTING_TABLES _WRITER_MODE _TRANSACTION _REJECTED_PIPELINE_DIRECTORY _CONTINUE_TRANSLATION_BAD_DATA _MAX_OPEN_TABLES _INTEGER_OVERRIDE_DEFINITION _STRICT_LOAD _FORCE_IN_AGGREGATES _DEFAULT_Z_VALUE _LEAVE_LAYER_EXTENTS _SPLIT_DONUTS SDE30_OUT_RECONCILE_AND_POST SDE30_OUT_TABLES_TO_RECONCILE SDE30_OUT_DELETE_CHILD_AFTER_RECONCILE_AND_POST"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="POSTGIS"
+#! DATASET="$(DestDataset_POSTGIS_3)"
+#! KEYWORD="POSTGIS_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="63"
+#! ATTR_CASE="LOWER"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="postgis_type {FME_GEN_GEOMETRY} postgis_mode INHERIT_FROM_WRITER postgis_sql_key_columns &quot;&quot; postgis_spatial_column_type geometry postgis_spatial_column geom postgis_srid &quot;&quot; postgis_drop_table NO postgis_truncate_table NO postgis_create_with_oids NO postgis_create_gist_index YES postgis_vacuum_analyze NO postgis_allow_serial_writing NO"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_feature_type char(50) fme_type char(50) fme_color char(50) fme_start_angle float8 fme_rotation float8 fme_fill_color char(50) postgis_type char(50) fme_db_operation char(8) postgis_collection_id int4 fme_sweep_angle float8 fme_text_size float8 fme_basename char(50) fme_primary_axis float8 fme_dataset char(50) fme_text_string char(50) fme_geometry fme_char(50) postgis_collection_part_id int4 fme_secondary_axis float8 fme_where char(254)"
+#! DEFLINE_PARMS="&quot;GUI CHOICE postgis_drop_table YES%NO Drop Table First&quot; NO &quot;GUI CHOICE postgis_truncate_table YES%NO Truncate Table First&quot; NO &quot;GUI CHOICE postgis_mode INHERIT_FROM_WRITER%INSERT%UPDATE%DELETE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL ATTRLIST_COMMAS postgis_sql_key_columns SQL Key Columns&quot; &quot;&quot; &quot;GUI CHOICE postgis_spatial_column_type geometry%geography Spatial Column Type&quot; geometry &quot;GUI TEXT postgis_spatial_column Spatial Column Name&quot; geom &quot;GUI OPTIONAL FLOAT postgis_srid Spatial Column SRID&quot; &quot;&quot; &quot;GUI CHOICE postgis_create_with_oids YES%NO Create With OIDs&quot; NO &quot;GUI CHOICE postgis_create_gist_index YES%NO Create GiST Index&quot; YES &quot;GUI CHOICE postgis_vacuum_analyze YES%NO Vacuum Analyze Table&quot; NO &quot;GUI CHOICE postgis_allow_serial_writing YES%NO Allow Serial Column Writing&quot; NO "
+#! ATTR_INDEX_TYPES="BTREE RTREE HASH PRIKEY"
+#! ATTR_NAME_INVALID_CHARS=". %-#[]&quot;()!?*&apos;&amp;+\/"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DATABASE"
+#! GENERATE_FME_BUILD_NUM="15515"
+#! FANOUT_DIRECTORY=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="Table1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="Database"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="blob"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(255)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="guid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real32"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int32"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_time"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="SDE30"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bool"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bytea"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_int16"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="serial"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float4"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="money"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_real64"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timetz"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timestamp"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timestamptz"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int64"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="numeric(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="numeric(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="uuid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bit(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varbit"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varbit(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_text"
+#! FME_TYPE="fme_text"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_simple_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_area"
+#! FME_TYPE="fme_area"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_nil"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_point"
+#! FME_TYPE="fme_text"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_area"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_line"
+#! FME_TYPE="fme_arc"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_area"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_area"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_raster"
+#! FME_TYPE="fme_raster"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_line"
+#! FME_TYPE="fme_surface"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_line"
+#! FME_TYPE="fme_solid"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_nil"
+#! FME_TYPE="fme_collection"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="sde30_area"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="SDE30"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multilinestring"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multicurve"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_linestring"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_circularstring"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_compoundcurve"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multisurface"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_curvepolygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipoint"
+#! FME_TYPE="fme_text"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multilinestring"
+#! FME_TYPE="fme_arc"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_geometry"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_geometrycollection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multilinestring"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multilinestring"
+#! FME_TYPE="fme_solid"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_triangle"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_polyhedralsurface"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_polyhedralsurface"
+#! FME_TYPE="fme_solid"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_tin"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGIS"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.PROPDIM_ANNO_2015"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER="DBO"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="43"
+#! FEAT_GEOMTYPE="sde30_nil sde30_area"
+#! POSITION="320 -341"
+#! BOUNDING_RECT="320 -341 0 0"
+#! ORDER="41"
+#! COLLAPSED="false"
+#! KEYWORD="SDE30_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FeatureID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ZOrder" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="AnnotationClassID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Element" ATTR_TYPE="blob" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SymbolID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Status" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="TextString" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FontName" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FontSize" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Bold" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Italic" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Underline" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="VerticalAlignment" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HorizontalAlignment" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="XOffset" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="YOffset" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Angle" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FontLeading" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="WordSpacing" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CharacterWidth" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CharacterSpacing" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FlipAngle" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Override" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="X" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Y" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OFFSETX" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OFFSETY" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HEIGHT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SYMBOL" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LEVEL_" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="TEXT_" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="REC_" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FEATURE_KEY" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DIM_" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DIM_ID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SYMBOL_1" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LEVEL_1" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="coagis.bc_propdim_anno"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER="coagis"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="4"
+#! FEAT_GEOMTYPE="postgis_multipolygon"
+#! POSITION="1545.17 -349.119"
+#! BOUNDING_RECT="1545.17 -349.119 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="POSTGIS_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="objectid" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="featureid" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="zorder" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="annotationclassid" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="element" ATTR_TYPE="bytea" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="symbolid" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="status" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="textstring" ATTR_TYPE="varchar(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fontname" ATTR_TYPE="varchar(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fontsize" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="bold" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="italic" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="underline" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="verticalalignment" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="horizontalalignment" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="xoffset" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="yoffset" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="angle" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fontleading" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="wordspacing" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="characterwidth" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="characterspacing" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="flipangle" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="override" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="dim_" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="dim_id" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="x" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="y" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="offsetx" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="offsety" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="height" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="symbol" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="level_" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="text_" ATTR_TYPE="varchar(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="rec_" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="id" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="symbol_1" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="level_1" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="feature_key" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgis_spatial_column" PARM_VALUE="shape"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_truncate_table" PARM_VALUE="YES"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_create_with_oids" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_allow_serial_writing" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_drop_table" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_srid" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgis_vacuum_analyze" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_create_gist_index" PARM_VALUE="YES"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_sql_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgis_spatial_column_type" PARM_VALUE="geometry"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT SourceDataset_SDE30_3 Source ESRI ArcSDE Dataset:"
+#! DEFAULT_VALUE="bun"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGIS_3 FMT:POSTGIS Connection:"
+#! DEFAULT_VALUE="coa-gis-warehouse1b"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="3"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! <ATTR_LINK
+#! IDENTIFIER="851971"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="11"
+#! TARGET_PORT_DESC="11"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="327683"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="21"
+#! TARGET_PORT_DESC="21"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1441795"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="33"
+#! TARGET_PORT_DESC="38"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2097155"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="9"
+#! TARGET_PORT_DESC="9"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1703939"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="7"
+#! TARGET_PORT_DESC="7"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="983043"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="37"
+#! TARGET_PORT_DESC="36"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1245187"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="3"
+#! TARGET_PORT_DESC="3"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1179651"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="8"
+#! TARGET_PORT_DESC="8"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196611"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="24"
+#! TARGET_PORT_DESC="26"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2555907"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="20"
+#! TARGET_PORT_DESC="20"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1114115"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="15"
+#! TARGET_PORT_DESC="15"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1966083"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="23"
+#! TARGET_PORT_DESC="23"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2228227"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="31"
+#! TARGET_PORT_DESC="33"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1572867"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1376259"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="25"
+#! TARGET_PORT_DESC="27"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="524291"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="34"
+#! TARGET_PORT_DESC="24"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2031619"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="13"
+#! TARGET_PORT_DESC="13"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1310723"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="16"
+#! TARGET_PORT_DESC="16"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2490371"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="35"
+#! TARGET_PORT_DESC="25"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2424835"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="32"
+#! TARGET_PORT_DESC="34"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="786435"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="17"
+#! TARGET_PORT_DESC="17"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="589827"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="36"
+#! TARGET_PORT_DESC="35"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65539"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="458755"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1835011"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="10"
+#! TARGET_PORT_DESC="10"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2359299"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="30"
+#! TARGET_PORT_DESC="32"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131075"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="12"
+#! TARGET_PORT_DESC="12"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1769475"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="28"
+#! TARGET_PORT_DESC="30"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2293763"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="5"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262147"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="917507"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="27"
+#! TARGET_PORT_DESC="29"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="2162691"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="6"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1638403"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="19"
+#! TARGET_PORT_DESC="19"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="655363"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="14"
+#! TARGET_PORT_DESC="14"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="720899"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="26"
+#! TARGET_PORT_DESC="28"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1048579"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="18"
+#! TARGET_PORT_DESC="18"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="393219"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="29"
+#! TARGET_PORT_DESC="31"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1507331"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="38"
+#! TARGET_PORT_DESC="37"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="1900547"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="22"
+#! TARGET_PORT_DESC="22"
+#! />
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_SDE30_1,SDE30_IN_SERVER_SDE30_1,SDE30_IN_INSTANCE_SDE30_1,SDE_IN_VERSION_NAME_SDE30_1,SDE30_IN_REMOVE_TABLE_QUALIFIER_SDE30_1,SDE30_IN_WHERE_SDE30_1,SDE30_IN_SEARCH_ENVELOPE_MINX_SDE30_1,SDE30_IN_SEARCH_ENVELOPE_MINY_SDE30_1,SDE30_IN_SEARCH_ENVELOPE_MAXX_SDE30_1,SDE30_IN_SEARCH_ENVELOPE_MAXY_SDE30_1,SDE30_IN_CLIP_TO_ENVELOPE_SDE30_1,_IN_SDE3SEARCH_ENVELOPE_COORDINATE_SYSTEM_SDE30_1,_IN_SDE3SearchMethodFilter_SDE30_1,_IN_SDE3PersistentConnection_SDE30_1,_IN_SDE3SearchOrder_SDE30_1,_IN_SDE3SearchMethod_SDE30_1,_IN_SDE3SearchFeature_SDE30_1,_IN_SDE3ChildVersionName_SDE30_1,DestDataset_POSTGIS_1,POSTGIS_OUT_WRITER_MODE_POSTGIS_1,POSTGIS_OUT_START_TRANSACTION_POSTGIS_1,POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_1,POSTGIS_OUT_BULK_COPY_POSTGIS_1,POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_1,POSTGIS_OUT_BEGIN_SQL_POSTGIS_1,POSTGIS_OUT_END_SQL_POSTGIS_1
+DEFAULT_MACRO SourceDataset_SDE30_3 bun
+GUI TEXT SourceDataset_SDE30_3 Source ESRI ArcSDE Dataset:
+DEFAULT_MACRO DestDataset_POSTGIS_3 coa-gis-warehouse1b
+GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGIS_3 FMT:POSTGIS Connection:
+INCLUDE [ if {{$(SourceDataset_SDE30_3)} == {}} { puts_real {Parameter 'SourceDataset_SDE30_3' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_POSTGIS_3)} == {}} { puts_real {Parameter 'DestDataset_POSTGIS_3' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE SDE30
+READER_KEYWORD SDE30_1
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} POSTGIS
+MULTI_WRITER_KEYWORD{0} POSTGIS_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "SDE30_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER SDE30 SDE30_1
+# ========================================================================
+# Specify that if no ids are specified then the DEF lines are used
+# for the ids.
+SDE30_1_USE_DEFS_IF_NO_IDS YES
+# GUI TEXT _IN_SDE3SearchMethod Search Method
+DEFAULT_MACRO _IN_SDE3SearchMethod_SDE30_1 SDE_ENVELOPE
+SDE30_1_SEARCH_METHOD $(_IN_SDE3SearchMethod_SDE30_1)
+# ========================================================================
+# The following GUI line prompts for the name of the SDE dataset,
+# from which data will be extracted.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_SDE30_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER SDE30 SDE30_1
+DEFAULT_MACRO SourceDataset_SDE30_1 $(SourceDataset_SDE30_3)
+GUI TEXT SourceDataset_SDE30_1 Source ESRI ArcSDE Dataset:
+# ============================================================================
+# Now include the text splitting pipeline.
+INCLUDE "$(FME_HOME)/pipeline/sde30_read.fmi"
+# =============================================================================
+#
+DEFAULT_MACRO SDE30_IN_SERVER_SDE30_1 bcgis.bcdomain.local
+GUI TEXT SDE30_IN_SERVER_SDE30_1 Server:
+SDE30_1_SERVER "$(SDE30_IN_SERVER_SDE30_1)"
+# =============================================================================
+#
+DEFAULT_MACRO SDE30_IN_INSTANCE_SDE30_1 sde:sqlserver:bcgis.bcdomain.local
+GUI TEXT SDE30_IN_INSTANCE_SDE30_1 Instance Name:
+SDE30_1_INSTANCE "$(SDE30_IN_INSTANCE_SDE30_1)"
+DEFAULT_MACRO SDE_IN_VERSION_NAME_SDE30_1 DBO.default
+GUI TEXT SDE_IN_VERSION_NAME_SDE30_1 Version:
+SDE30_1_VERSION_NAME "$(SDE_IN_VERSION_NAME_SDE30_1)"
+# ========================================================================
+# ========================================================================
+SDE30_1_SERVER "$(SDE30_IN_SERVER_SDE30_1)"
+GUI TEXT SDE30_IN_SERVER_SDE30_1 Server:
+# ========================================================================
+# ========================================================================
+# ========================================================================
+SDE30_1_INSTANCE "$(SDE30_IN_INSTANCE_SDE30_1)"
+GUI TEXT SDE30_IN_INSTANCE_SDE30_1 Instance:
+# ========================================================================
+# ========================================================================
+# ========================================================================
+DEFAULT_MACRO SDE30_IN_REMOVE_TABLE_QUALIFIER_SDE30_1 NO
+SDE30_1_REMOVE_TABLE_QUALIFIER "$(SDE30_IN_REMOVE_TABLE_QUALIFIER_SDE30_1)"
+GUI CHECKBOX SDE30_IN_REMOVE_TABLE_QUALIFIER_SDE30_1 YES%NO Remove Schema Qualifier
+# ========================================================================
+DEFAULT_MACRO SDE30_IN_WHERE_SDE30_1 
+SDE30_1_WHERE "$(SDE30_IN_WHERE_SDE30_1)"
+GUI OPTIONAL TEXT SDE30_IN_WHERE_SDE30_1 WHERE Clause:
+# ============================================================================
+# bounding box with optional clipping
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO SDE30_IN_SEARCH_ENVELOPE_MINX_SDE30_1 0
+SDE30_1_SEARCH_ENVELOPE "$(SDE30_IN_SEARCH_ENVELOPE_MINX_SDE30_1)"
+GUI OPTIONAL FLOAT SDE30_IN_SEARCH_ENVELOPE_MINX_SDE30_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO SDE30_IN_SEARCH_ENVELOPE_MINY_SDE30_1 0
+SDE30_1_SEARCH_ENVELOPE "$(SDE30_IN_SEARCH_ENVELOPE_MINY_SDE30_1)"
+GUI OPTIONAL FLOAT SDE30_IN_SEARCH_ENVELOPE_MINY_SDE30_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO SDE30_IN_SEARCH_ENVELOPE_MAXX_SDE30_1 0
+SDE30_1_SEARCH_ENVELOPE "$(SDE30_IN_SEARCH_ENVELOPE_MAXX_SDE30_1)"
+GUI OPTIONAL FLOAT SDE30_IN_SEARCH_ENVELOPE_MAXX_SDE30_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO SDE30_IN_SEARCH_ENVELOPE_MAXY_SDE30_1 0
+SDE30_1_SEARCH_ENVELOPE "$(SDE30_IN_SEARCH_ENVELOPE_MAXY_SDE30_1)"
+GUI OPTIONAL FLOAT SDE30_IN_SEARCH_ENVELOPE_MAXY_SDE30_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO SDE30_IN_CLIP_TO_ENVELOPE_SDE30_1 NO
+SDE30_1_CLIP_TO_ENVELOPE "$(SDE30_IN_CLIP_TO_ENVELOPE_SDE30_1)"
+GUI OPTIONAL CHECKBOX SDE30_IN_CLIP_TO_ENVELOPE_SDE30_1 YES%NO Clip to Search Envelope
+# ============================================================================
+# Search Envelope Coordinate System
+DEFAULT_MACRO _IN_SDE3SEARCH_ENVELOPE_COORDINATE_SYSTEM_SDE30_1 
+GUI OPTIONAL COORDSYS _IN_SDE3SEARCH_ENVELOPE_COORDINATE_SYSTEM_SDE30_1 Search Envelope Coordinate System:
+SDE30_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(_IN_SDE3SEARCH_ENVELOPE_COORDINATE_SYSTEM_SDE30_1)"
+# ========================================================================
+# The following specifies whether features returned will or will not match
+# the spatial constraint given.
+DEFAULT_MACRO _IN_SDE3SearchMethodFilter_SDE30_1 TRUE
+GUI CHOICE _IN_SDE3SearchMethodFilter_SDE30_1 TRUE%FALSE Search Method Filter:
+SDE30_1_SEARCH_METHOD_FILTER $(_IN_SDE3SearchMethodFilter_SDE30_1)
+# ========================================================================
+# The following specifies whether to create a persistent connection. If
+# set to YES, the connection will remain open until FME is shutdown.
+DEFAULT_MACRO _IN_SDE3PersistentConnection_SDE30_1 NO
+GUI CHOICE _IN_SDE3PersistentConnection_SDE30_1 YES%NO Make Connection Persistent:
+SDE30_1_PERSISTENT_CONNECTION $(_IN_SDE3PersistentConnection_SDE30_1)
+# ========================================================================
+# The following specifies whether we want to use unified date attributes,
+# where the date and time are read into one attribute, or whether we want
+# to use split date attributes, where two attributes are produced, one with
+# only the date, and another with both the date and time.
+#
+# The default value of yes should not be changed.
+DEFAULT_MACRO _IN_SDE3UseUnifiedDateAttrs_SDE30_1 yes
+SDE30_1_USE_UNIFIED_DATE_ATTRS $(_IN_SDE3UseUnifiedDateAttrs_SDE30_1)
+# ========================================================================
+# The following specifies the order the the underlying search is performed
+# in the SDE. The default is OPTIMIZE, other values are SPATIAL_FIRST, in which
+# case the spatial component is done first, and ATTRIBUTE_FIRST, in which case
+# the attribute search is done first.
+DEFAULT_MACRO _IN_SDE3SearchOrder_SDE30_1 OPTIMIZE
+GUI CHOICE _IN_SDE3SearchOrder_SDE30_1 OPTIMIZE%SPATIAL_FIRST%ATTRIBUTE_FIRST Search Method Order:
+SDE30_1_SEARCH_ORDER $(_IN_SDE3SearchOrder_SDE30_1)
+# ========================================================================
+# The following defines the search method for the query.
+GUI OPTIONAL CHOICE _IN_SDE3SearchMethod_SDE30_1 SDE_ENVELOPE%SDE_ENVELOPE_BY_GRID%SDE_COMMON_POINT%SDE_LINE_CROSS%SDE_COMMON_LINE%SDE_CP_OR_LC%SDE_AI_OR_ET%SDE_AREA_INTERSECT%SDE_AI_NO_ET%SDE_CONTAINED_IN%SDE_CONTAINS%SDE_CONTAINED_IN_NO_ET%SDE_CONTAINS_NO_ET%SDE_POINT_IN_POLY%SDE_IDENTICAL Search Method:
+# ========================================================================
+# The following defines the search feature for the query. It defines an
+# arbitrarily complex search feature as a spatial contraint. It is in the
+# form <keyword>_SEARCH_FEATURE [<xCoord> <yCoord>]+.
+DEFAULT_MACRO _IN_SDE3SearchFeature_SDE30_1 
+GUI OPTIONAL TEXT _IN_SDE3SearchFeature_SDE30_1 Search Feature:
+SDE30_1_SEARCH_FEATURE $(_IN_SDE3SearchFeature_SDE30_1)
+# ========================================================================
+# The following specifies the name of a child version to be created. After
+# the version has been created, tables will be read using this version
+# rather than the version specified by the VERSION_NAME keyword.
+DEFAULT_MACRO _IN_SDE3ChildVersionName_SDE30_1 
+GUI OPTIONAL TEXT _IN_SDE3ChildVersionName_SDE30_1 Child Version Name:
+SDE30_1_CHILD_VERSION_NAME $(_IN_SDE3ChildVersionName_SDE30_1)
+SDE30_1_DATASET "$(SourceDataset_SDE30_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POSTGIS_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER POSTGIS POSTGIS_1
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_POSTGIS_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER POSTGIS POSTGIS_1
+DEFAULT_MACRO DestDataset_POSTGIS_1 $(DestDataset_POSTGIS_3)
+GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGIS_1 FMT:POSTGIS Connection:
+# ============================================================================
+# Write geometry (planar) or geography (geodetic) column
+DEFAULT_MACRO POSTGIS_OUT_SPATIAL_COLUMN_TYPE_POSTGIS_1 geometry
+POSTGIS_1_SPATIAL_COLUMN_TYPE "$(POSTGIS_OUT_SPATIAL_COLUMN_TYPE_POSTGIS_1)"
+# ============================================================================
+# Default spatial column name
+DEFAULT_MACRO POSTGIS_OUT_SPATIAL_COLUMN_NAME_POSTGIS_1 geom
+POSTGIS_1_SPATIAL_COLUMN_NAME "$(POSTGIS_OUT_SPATIAL_COLUMN_NAME_POSTGIS_1)"
+DEFAULT_MACRO POSTGIS_OUT_GENERIC_GEOMETRY_POSTGIS_1 no
+POSTGIS_1_GENERIC_GEOMETRY "$(POSTGIS_OUT_GENERIC_GEOMETRY_POSTGIS_1)"
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO POSTGIS_OUT_DESTINATION_DATASETTYPE_VALIDATION_POSTGIS_1 Yes
+POSTGIS_1_DESTINATION_DATASETTYPE_VALIDATION "$(POSTGIS_OUT_DESTINATION_DATASETTYPE_VALIDATION_POSTGIS_1)"
+DEFAULT_MACRO POSTGIS_OUT_COORDINATE_SYSTEM_GRANULARITY_POSTGIS_1 FEATURE_TYPE
+POSTGIS_1_COORDINATE_SYSTEM_GRANULARITY "$(POSTGIS_OUT_COORDINATE_SYSTEM_GRANULARITY_POSTGIS_1)"
+DEFAULT_MACRO POSTGIS_OUT_WRITER_MODE_POSTGIS_1 INSERT
+GUI CHOICE POSTGIS_OUT_WRITER_MODE_POSTGIS_1 INSERT%UPDATE%DELETE Writer Mode:
+POSTGIS_1_WRITER_MODE $(POSTGIS_OUT_WRITER_MODE_POSTGIS_1)
+DEFAULT_MACRO POSTGIS_OUT_START_TRANSACTION_POSTGIS_1 0
+GUI TEXT POSTGIS_OUT_START_TRANSACTION_POSTGIS_1 Starting Feature:
+POSTGIS_1_START_TRANSACTION $(POSTGIS_OUT_START_TRANSACTION_POSTGIS_1)
+DEFAULT_MACRO POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_1 1000
+GUI TEXT POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_1 Features Per Transaction:
+POSTGIS_1_TRANSACTION_INTERVAL $(POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_1)
+DEFAULT_MACRO POSTGIS_OUT_BULK_COPY_POSTGIS_1 YES
+GUI CHOICE POSTGIS_OUT_BULK_COPY_POSTGIS_1 YES%NO Bulk Copy Insert:
+POSTGIS_1_BULK_COPY $(POSTGIS_OUT_BULK_COPY_POSTGIS_1)
+DEFAULT_MACRO POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_1 NO
+GUI CHOICE POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_1 YES%NO Insert WKT:
+POSTGIS_1_INSERT_TEXT_GEOMETRY $(POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_1)
+DEFAULT_MACRO POSTGIS_OUT_BEGIN_SQL_POSTGIS_1 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGIS_OUT_BEGIN_SQL_POSTGIS_1 SQL Statement to Execute Before Translation:
+POSTGIS_1_BEGIN_SQL "$(POSTGIS_OUT_BEGIN_SQL_POSTGIS_1)"
+DEFAULT_MACRO POSTGIS_OUT_END_SQL_POSTGIS_1 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGIS_OUT_END_SQL_POSTGIS_1 SQL Statement to Execute After Translation:
+POSTGIS_1_END_SQL "$(POSTGIS_OUT_END_SQL_POSTGIS_1)"
+POSTGIS_1_DATASET "$(DestDataset_POSTGIS_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "\\coa-gisdb-msql\GIS_SCRIPT_JOBS\FME\BuncombeImport\LOGS\BC_Property_COAGIS_FME.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_SDE30_1 SDE30_1
+DEFAULT_MACRO DATASET_KEYWORD_POSTGIS_1 POSTGIS_1
+# -------------------------------------------------------------------------
+
+SDE30_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME bc_anno_to-warehouse
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+SDE30_1_DEF DBO.PROPDIM_ANNO_2015   SDE_CONFIG_KEYWORD           {SDE_CONFIG_KEYWORD}   SDE_LAYER                    {SDE_COLUMN_NAME}   SDE_PRECISION                {SDE_PRECISION}   SDE_GRID{0}                  {SDE_GRID{0}}   SDE_GRID{1}                  {SDE_GRID{1}}   SDE_GRID{2}                  {SDE_GRID{2}}   SDE_DIMENSION                {SDE_DIMENSION}   SDE_MEASURED                 {SDE_MEASURED}   SDE_ANNOTATED                {SDE_ANNOTATED}   SDE_AREA                     {SDE_AREA}   SDE_LINE                     {SDE_LINE}   SDE_POINT                    {SDE_POINT}   SDE_SIMPLE_LINE              {SDE_SIMPLE_LINE}   SDE_NIL                      {SDE_NIL}   SDE_MULTIPART                {SDE_MULTIPART}   SDE_XORIGIN                  {SDE_XORIGIN}   SDE_YORIGIN                  {SDE_YORIGIN}   SDE_SCALE                    {SDE_SCALE}   SDE_ZORIGIN                  {SDE_ZORIGIN}   SDE_ZSCALE                   {SDE_ZSCALE}   SDE_MEASURED_ORIGIN          {SDE_MEASURED_ORIGIN}   SDE_MEASURED_SCALE           {SDE_MEASURED_SCALE}   OBJECTID                     integer   FeatureID                    integer   ZOrder                       integer   AnnotationClassID            integer   Element                      blob   SymbolID                     integer   Status                       smallint   TextString                   char(255)   FontName                     char(255)   FontSize                     double   Bold                         smallint   Italic                       smallint   Underline                    smallint   VerticalAlignment            smallint   HorizontalAlignment          smallint   XOffset                      double   YOffset                      double   Angle                        double   FontLeading                  double   WordSpacing                  double   CharacterWidth               double   CharacterSpacing             double   FlipAngle                    double   Override                     integer   X                            double   Y                            double   OFFSETX                      double   OFFSETY                      double   HEIGHT                       double   SYMBOL                       integer   LEVEL_                       integer   TEXT_                        char(255)   REC_                         integer   FEATURE_KEY                  integer   DIM_                         integer   DIM_ID                       integer   ID                           integer   SYMBOL_1                     integer   LEVEL_1                      integer
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *       @SupplyAttributes(multi_reader_keyword,SDE30_1)    ROUTE SDE30 SDE30_1::DBO.PROPDIM_ANNO_2015 TO FME_GENERIC ::DBO.PROPDIM_ANNO_2015 ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+SDE30_1_MERGE_DEF SDE30_1::DBO.PROPDIM_ANNO_2015 EXACT DBO.PROPDIM_ANNO_2015
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC DBO.PROPDIM_ANNO_2015 TO POSTGIS __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>objectid<comma>OBJECTID<comma>featureid<comma>FeatureID<comma>zorder<comma>ZOrder<comma>annotationclassid<comma>AnnotationClassID<comma>element<comma>Element<comma>symbolid<comma>SymbolID<comma>status<comma>Status<comma>textstring<comma>TextString<comma>fontname<comma>FontName<comma>fontsize<comma>FontSize<comma>bold<comma>Bold<comma>italic<comma>Italic<comma>underline<comma>Underline<comma>verticalalignment<comma>VerticalAlignment<comma>horizontalalignment<comma>HorizontalAlignment<comma>xoffset<comma>XOffset<comma>yoffset<comma>YOffset<comma>angle<comma>Angle<comma>fontleading<comma>FontLeading<comma>wordspacing<comma>WordSpacing<comma>characterwidth<comma>CharacterWidth<comma>characterspacing<comma>CharacterSpacing<comma>flipangle<comma>FlipAngle<comma>override<comma>Override<comma>dim_<comma>DIM_<comma>dim_id<comma>DIM_ID<comma>x<comma>X<comma>y<comma>Y<comma>offsetx<comma>OFFSETX<comma>offsety<comma>OFFSETY<comma>height<comma>HEIGHT<comma>symbol<comma>SYMBOL<comma>level_<comma>LEVEL_<comma>text_<comma>TEXT_<comma>rec_<comma>REC_<comma>id<comma>ID<comma>symbol_1<comma>SYMBOL_1<comma>level_1<comma>LEVEL_1<comma>feature_key<comma>FEATURE_KEY<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>coagis.bc_propdim_anno<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+POSTGIS_1_DEF coagis.bc_propdim_anno   postgis_type                 postgis_multipolygon   postgis_mode                 INHERIT_FROM_WRITER   postgis_sql_key_columns      ""   postgis_spatial_column_type  geometry   postgis_spatial_column       shape   postgis_srid                 ""   postgis_drop_table           NO   postgis_truncate_table       YES   postgis_create_with_oids     NO   postgis_create_gist_index    YES   postgis_vacuum_analyze       NO   postgis_allow_serial_writing NO   objectid                     int4   featureid                    int4   zorder                       int4   annotationclassid            int4   element                      bytea   symbolid                     int4   status                       int2   textstring                   varchar(255)   fontname                     varchar(255)   fontsize                     numeric(38,8)   bold                         int2   italic                       int2   underline                    int2   verticalalignment            int2   horizontalalignment          int2   xoffset                      numeric(38,8)   yoffset                      numeric(38,8)   angle                        numeric(38,8)   fontleading                  numeric(38,8)   wordspacing                  numeric(38,8)   characterwidth               numeric(38,8)   characterspacing             numeric(38,8)   flipangle                    numeric(38,8)   override                     int4   dim_                         int4   dim_id                       int4   x                            numeric(38,8)   y                            numeric(38,8)   offsetx                      numeric(38,8)   offsety                      numeric(38,8)   height                       numeric(38,8)   symbol                       int4   level_                       int4   text_                        varchar(255)   rec_                         int4   id                           int4   symbol_1                     int4   level_1                      int4   feature_key                  int4
