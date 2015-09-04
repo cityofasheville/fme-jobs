@@ -1,0 +1,1 @@
+C:\Python27\ArcGIS10.2\python.exe C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\runallbat.py "/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/edit_to_warehouse_table/nightly/"  "dmichelson@ashevillenc.gov"

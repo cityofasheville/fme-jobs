@@ -1,6 +1,6 @@
 #!/usr/bin/env fme
 
-set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/from_county/workbench/bc_street_history_to-warehouse.fmw}
+set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/from_county/workbench/bc_greenways_to-edit.fmw}
 
 set destDirList {}
 set recreateSourceTree "no"
@@ -9,7 +9,7 @@ set superBatchFileName [FME_TempFilename]
 
 set superBatchFile [open $superBatchFileName "w"]
 
-lappend sourceDatasets {C:/Users/mssqlgisadmin/AppData/Roaming/ESRI/Desktop10.2/ArcCatalog/bcgis-addr.sde}
+lappend sourceDatasets {C:/Users/mssqlgisadmin/AppData/Roaming/ESRI/Desktop10.2/ArcCatalog/bcgis-bun.sde}
 
 set logStandardOut {}
 set logTimings {}
@@ -85,13 +85,9 @@ catch { set fmeHome $::env(FME_HOME)/ }
 if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
   puts $err
   puts "\nFME encountered an error. Please contact support@safe.com"
-  return -code error -errorinfo "FME encountered an error. Please contact support@safe.com" -errorcode "-999"
 } else {
   puts "\nTranslation SUCCESSFUL"
 }
 if [ catch { file delete $superBatchFileName } ] {
   puts "Warning: unable to delete $superBatchFileName"
-  return -code error -errorinfo "FME encountered an error. Please contact support@safe.com" -errorcode "-999"
 }
-
-
