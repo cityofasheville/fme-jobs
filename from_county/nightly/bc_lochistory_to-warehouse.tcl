@@ -1,6 +1,6 @@
 #!/usr/bin/env fme
 
-set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/workbench/bc_lochistory_to-edit.fmw}
+set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/from_county/workbench/bc_lochistory_to-warehouse.fmw}
 
 set destDirList {}
 set recreateSourceTree "no"

@@ -1,6 +1,6 @@
 #!/usr/bin/env fme
 
-set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/from_county/workbench/bc_address-to-edit.fmw}
+set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/from_county/workbench/bc_incorporated_areas_to-warehouse.fmw}
 
 set destDirList {}
 set recreateSourceTree "no"
@@ -9,7 +9,7 @@ set superBatchFileName [FME_TempFilename]
 
 set superBatchFile [open $superBatchFileName "w"]
 
-lappend sourceDatasets {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/workbench/bc_address-to-edit.fmw}
+lappend sourceDatasets {C:/Users/mssqlgisadmin/AppData/Roaming/ESRI/Desktop10.2/ArcCatalog/bcgis-bun.sde}
 
 set logStandardOut {}
 set logTimings {}
