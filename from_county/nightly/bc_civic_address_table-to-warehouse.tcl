@@ -91,6 +91,5 @@ if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
 }
 if [ catch { file delete $superBatchFileName } ] {
   puts "Warning: unable to delete $superBatchFileName"
-  return -code error -errorinfo "FME encountered an error. Please contact support@safe.com" -errorcode "-999"
 }
 
