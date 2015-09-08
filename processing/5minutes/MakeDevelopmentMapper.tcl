@@ -1,6 +1,6 @@
 #!/usr/bin/env fme
 
-set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/from_county/workbench/bc_greenways_to-edit.fmw}
+set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/processing/workbench/MakeDevelopmentMapper.fmw}
 
 set destDirList {}
 set recreateSourceTree "no"
@@ -9,7 +9,7 @@ set superBatchFileName [FME_TempFilename]
 
 set superBatchFile [open $superBatchFileName "w"]
 
-lappend sourceDatasets {C:/Users/mssqlgisadmin/AppData/Roaming/ESRI/Desktop10.2/ArcCatalog/bcgis-bun.sde}
+lappend sourceDatasets {coa-gis-edit1b}
 
 set logStandardOut {}
 set logTimings {}
@@ -82,6 +82,7 @@ close $superBatchFile
 set fmeHome {}
 catch { set fmeHome $::env(FME_HOME)/ }
 
+return -code 0
 if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
   puts $err
   puts "\nFME encountered an error. Please contact support@safe.com"
