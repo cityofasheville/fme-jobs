@@ -1,0 +1,1 @@
+C:\pgadmin\1.20\psql -h coa-gis-edit1 -d coagisedit -f C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\processing\no_schedule\property_master\deletenull_ownerspins.sql > C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\processing\no_schedule\property_master\delete.log

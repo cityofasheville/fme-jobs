@@ -131,7 +131,6 @@ set fmeHome {}
 catch { set fmeHome $::env(FME_HOME)/ }
 
 
-return -code 0
 if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
   puts $err
   puts "\nFME encountered an error. Please contact support@safe.com"

@@ -1,6 +1,6 @@
 #!/usr/bin/env fme
 
-set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/processing/workbench/NewSanCustModelforNAD83PINs.fmw}
+set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/processing/workbench/MUNISCPFINPUT_COAGIS.fmw}
 
 set destDirList {}
 set recreateSourceTree "no"
@@ -9,7 +9,7 @@ set superBatchFileName [FME_TempFilename]
 
 set superBatchFile [open $superBatchFileName "w"]
 
-lappend sourceDatasets {C:/Users/mssqlgisadmin/AppData/Roaming/ESRI/Desktop10.2/ArcCatalog/coa-gis-edit1.sde}
+lappend sourceDatasets {coa-gis-edit1}
 
 set logStandardOut {}
 set logTimings {}
@@ -92,4 +92,3 @@ if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
 if [ catch { file delete $superBatchFileName } ] {
   puts "Warning: unable to delete $superBatchFileName"
 }
-
