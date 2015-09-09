@@ -1,1 +1,1 @@
-delete from COAGIS.COA_MUNISCPFINPUT where "4" is  null and "24" is  null
+delete from COAGIS.COA_MUNISCPFINPUT where "4" is  null and "24" is  null;
