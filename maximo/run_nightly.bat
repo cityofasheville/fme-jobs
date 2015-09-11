@@ -1,1 +1,0 @@
-C:\Python27\ArcGIS10.2\python.exe C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\runallbat.py "C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/maximo/nightly/"  "dmichelson@ashevillenc.gov"
