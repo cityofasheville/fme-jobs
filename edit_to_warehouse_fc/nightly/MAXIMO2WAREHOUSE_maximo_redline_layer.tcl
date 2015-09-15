@@ -1,6 +1,6 @@
 #!/usr/bin/env fme
 
-set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/update_maximo_sde/workbench/MAXIMOSDE_add_data.fmw}
+set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/edit_to_warehouse_fc/workbench/MAXIMO2WAREHOUSE_maximo_redline_layer.fmw}
 
 set destDirList {}
 set recreateSourceTree "no"
@@ -81,6 +81,7 @@ close $superBatchFile
 
 set fmeHome {}
 catch { set fmeHome $::env(FME_HOME)/ }
+
 
 if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
   puts $err

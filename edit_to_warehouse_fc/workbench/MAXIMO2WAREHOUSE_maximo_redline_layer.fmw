@@ -1,0 +1,1233 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\FME\fme.exe C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\edit_to_warehouse_fc\workbench\MAXIMO2WAREHOUSE_maximo_redline_layer.fmw
+#          --SourceDataset_MSSQL_SPATIAL "maximosde"
+#          --DestDataset_POSTGIS_3 "coa-gis-warehouse1b"
+#          --MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL "********"
+#    
+#    
+#! FME_BUILD_NUM="15515"
+#! USAGE=""
+#! CATEGORY=""
+#! FME_STROKE_MAX_DEVIATION="0"
+#! REQUIREMENTS_KEYWORD=""
+#! LEGAL_TERMS_CONDITIONS=""
+#! VIEW_POSITION="-1302.01 144.001"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! FME_DOCUMENT_GUID="2cd6b5a1-d914-4166-ae6f-727001e894c5"
+#! ZOOM_SCALE="100"
+#! IGNORE_READER_FAILURE="No"
+#! DOC_EXTENTS="954.986 49.5096"
+#! REDIRECT_TERMINATORS="NONE"
+#! MAX_LOG_FEATURES="200"
+#! LAST_SAVE_BUILD="FME(R) 2015.1.1.0 (20150715 - Build 15515 - WIN32)"
+#! END_TCL=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! DESTINATION_ROUTING_FILE=""
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
+#! SOURCE="NONE"
+#! FME_SERVER_SERVICES=""
+#! REQUIREMENTS=""
+#! LAST_SAVE_DATE="2015-09-14T10:26:32"
+#! SHOW_INFO_NODES="true"
+#! PASSWORD=""
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! TITLE=""
+#! LOG_FILE="C:\jobs\MAXIMO2WAREHOUSE_maximo_redline_layer.log"
+#! END_PYTHON=""
+#! SOURCE_ROUTING_FILE=""
+#! HISTORY=""
+#! LOG_MAX_PRECISION="Yes"
+#! FME_REPROJECTION_ENGINE="FME"
+#! WORKSPACE_VERSION="1"
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! BEGIN_PYTHON=""
+#! FME_DOCUMENT_PRIORGUID=""
+#! DESTINATION="NONE"
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! DESCRIPTION=""
+#! BEGIN_TCL=""
+#! SHOW_ANNOTATIONS="true"
+#! DOC_TOP_LEFT="200 -200"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="MSSQL_SPATIAL"
+#! DATASET="$(SourceDataset_MSSQL_SPATIAL)"
+#! KEYWORD="MSSQL_SPATIAL_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="mssql_sql_statement &quot;&quot; mssql_where_clause &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis float multi_reader_id integer fme_dataset char(50) fme_basename char(50) multi_reader_full_id integer fme_primary_axis float fme_start_angle float fme_geometry fme_char(50) fme_color char(50) multi_reader_type char(50) fme_text_size float fme_sweep_angle float fme_text_string char(50) multi_reader_keyword char(50) fme_rotation float fme_fill_color char(50) fme_feature_type char(50) fme_type char(50)"
+#! DEFLINE_PARMS="&quot;GUI FORCE_DEFS OPTIONAL ALWAYS_ENABLED TEXT mssql_where_clause  WHERE Clause&quot; &quot;&quot; &quot;GUI FORCE_DEFS OPTIONAL ALWAYS_ENABLED TEXT mssql_sql_statement SELECT Statement&quot; &quot;&quot; &quot;GUI FORCE_DEFS DISABLE disabled Specify Geography (geodetic) Column&quot; No &quot;GUI FORCE_DEFS OPTIONAL WHOLE_LINE TEXT mssql_geom_column Geometry Column Name&quot; &quot;&quot; &quot;GUI FORCE_DEFS OPTIONAL WHOLE_LINE DISABLED_ONLY TEXT mssql_geog_column Geography Column Name&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES="indexed unique uniqueclustered clustered"
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DATABASE"
+#! GENERATE_FME_BUILD_NUM="5660"
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! MAX_FEATURES=""
+#! />
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="POSTGIS"
+#! DATASET="$(DestDataset_POSTGIS_3)"
+#! KEYWORD="POSTGIS_2"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="63"
+#! ATTR_CASE="LOWER"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="postgis_type {FME_GEN_GEOMETRY} postgis_mode INHERIT_FROM_WRITER postgis_sql_key_columns &quot;&quot; postgis_spatial_column_type geometry postgis_spatial_column geom postgis_srid &quot;&quot; postgis_drop_table NO postgis_truncate_table NO postgis_create_with_oids NO postgis_create_gist_index YES postgis_vacuum_analyze NO postgis_allow_serial_writing NO"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis float8 postgis_type char(50) fme_where char(254) postgis_collection_id int4 fme_dataset char(50) fme_basename char(50) fme_primary_axis float8 fme_db_operation char(8) fme_start_angle float8 fme_geometry fme_char(50) fme_color char(50) postgis_collection_part_id int4 fme_text_size float8 fme_sweep_angle float8 fme_text_string char(50) fme_rotation float8 fme_fill_color char(50) fme_feature_type char(50) fme_type char(50)"
+#! DEFLINE_PARMS="&quot;GUI CHOICE postgis_drop_table YES%NO Drop Table First&quot; NO &quot;GUI CHOICE postgis_truncate_table YES%NO Truncate Table First&quot; NO &quot;GUI CHOICE postgis_mode INHERIT_FROM_WRITER%INSERT%UPDATE%DELETE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL ATTRLIST_COMMAS postgis_sql_key_columns SQL Key Columns&quot; &quot;&quot; &quot;GUI CHOICE postgis_spatial_column_type geometry%geography Spatial Column Type&quot; geometry &quot;GUI TEXT postgis_spatial_column Spatial Column Name&quot; shape &quot;GUI OPTIONAL FLOAT postgis_srid Spatial Column SRID&quot; &quot;&quot; &quot;GUI CHOICE postgis_create_with_oids YES%NO Create With OIDs&quot; NO &quot;GUI CHOICE postgis_create_gist_index YES%NO Create GiST Index&quot; YES &quot;GUI CHOICE postgis_vacuum_analyze YES%NO Vacuum Analyze Table&quot; NO &quot;GUI CHOICE postgis_allow_serial_writing YES%NO Allow Serial Column Writing&quot; NO "
+#! ATTR_INDEX_TYPES="BTREE RTREE HASH PRIKEY"
+#! ATTR_NAME_INVALID_CHARS=". %-#[]&quot;()!?*&apos;&amp;+\/"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DATABASE"
+#! GENERATE_FME_BUILD_NUM="15515"
+#! FANOUT_PREFIX=""
+#! FANOUT_ID_ATTR=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_DIRECTORY=""
+#! FANOUT_SUFFIX=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="Database"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="Table1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bit"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="image"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="ntext"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="uniqueidentifier"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="timestamp"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="tinyint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int32"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bigint"
+#! FME_TYPE="fme_int32"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="identity"
+#! FME_TYPE="fme_int32"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="binary(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="nchar(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_time"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_date"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smalldatetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="numeric(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real"
+#! FME_TYPE="fme_real32"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="money"
+#! FME_TYPE="fme_real64"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallmoney"
+#! FME_TYPE="fme_real64"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="nvarchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varbinary(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bool"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_int16"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="serial"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float4"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="money"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_real64"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timetz"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timestamp"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timestamptz"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bytea"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int64"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="numeric(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="numeric(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="uuid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bit(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varbit"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGIS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varbit(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGIS"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_linestring"
+#! FME_TYPE="fme_line"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_multilinestring"
+#! FME_TYPE="fme_line"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_multipolygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_point"
+#! FME_TYPE="fme_text"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_polygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_linestring"
+#! FME_TYPE="fme_arc"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_geometrycollection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_polygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_linestring"
+#! FME_TYPE="fme_surface"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="mssql_spatial_linestring"
+#! FME_TYPE="fme_solid"
+#! FORMAT="MSSQL_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_area"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_area"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_area"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_point"
+#! FME_TYPE="fme_text"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_area"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_line"
+#! FME_TYPE="fme_arc"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_geometry"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_geometrycollection"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_area"
+#! FME_TYPE="fme_raster"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_line"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_line"
+#! FME_TYPE="fme_solid"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_geometry"
+#! FME_TYPE="fme_collection"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multilinestring"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multicurve"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_linestring"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_circularstring"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_compoundcurve"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multisurface"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_curvepolygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipoint"
+#! FME_TYPE="fme_text"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multilinestring"
+#! FME_TYPE="fme_arc"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_triangle"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_polyhedralsurface"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_polyhedralsurface"
+#! FME_TYPE="fme_solid"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_tin"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_geometrycollection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="POSTGIS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgis_multipolygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="POSTGIS"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="maximogis.redlinelayer"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER="maximogis"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="mssql_spatial_point mssql_spatial_linestring mssql_spatial_polygon mssql_spatial_multipoint mssql_spatial_multilinestring mssql_spatial_multipolygon mssql_spatial_geometrycollection mssql_spatial_none"
+#! POSITION="200 -200"
+#! BOUNDING_RECT="200 -200 0 0"
+#! ORDER="13"
+#! COLLAPSED="false"
+#! KEYWORD="MSSQL_SPATIAL_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="id" ATTR_TYPE="identity" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="create_dt" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="status" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="priority" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="xml_data" ATTR_TYPE="image" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="create_by" ATTR_TYPE="varchar(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="modified_dt" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="modified_by" ATTR_TYPE="varchar(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="parent_redline_id" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="editor_uname" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="complete_dt" ATTR_TYPE="datetime" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="comment_text" ATTR_TYPE="varchar(1000)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="mssql_geom_column" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="mssql_geog_column" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="mssql_where_clause" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="disabled" PARM_VALUE="No"/>
+#! <DEFLINE_PARM PARM_NAME="mssql_sql_statement" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="coagis.maximo_redline_layer"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER="coagis"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="4"
+#! FEAT_GEOMTYPE="postgis_multipolygon"
+#! POSITION="1154.99 -150.49"
+#! BOUNDING_RECT="1154.99 -150.49 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="POSTGIS_2"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="objectid" ATTR_TYPE="int4,PRIKEY" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="create_dt" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="status" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="priority" ATTR_TYPE="int2" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="xml_data" ATTR_TYPE="bytea" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="create_by" ATTR_TYPE="varchar(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="modified_dt" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="modified_by" ATTR_TYPE="varchar(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="parent_redline_id" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="editor_uname" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="complete_dt" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="comment_text" ATTR_TYPE="varchar(1000)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgis_spatial_column_type" PARM_VALUE="geometry"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_vacuum_analyze" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_sql_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgis_spatial_column" PARM_VALUE="shape"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_allow_serial_writing" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_truncate_table" PARM_VALUE="YES"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_create_gist_index" PARM_VALUE="YES"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_drop_table" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! <DEFLINE_PARM PARM_NAME="postgis_srid" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgis_create_with_oids" PARM_VALUE="NO"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI Text SourceDataset_MSSQL_SPATIAL Source DATABASE Name:"
+#! DEFAULT_VALUE="maximosde"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGIS_3 FMT:POSTGIS Connection:"
+#! DEFAULT_VALUE="coa-gis-warehouse1b"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI PASSWORD MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL Password:"
+#! DEFAULT_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszgpUEs46LbdeZJFWl8cHP1lXp2CMRSHSChZ6hTc2cS1DlMUD8BQ3NPGUtu8Y1rk0kExi/+eLoAWwn2VST2bNKAw67o+cx3zM/xUOydW1J6LVkfHqgYFivbQRClC9yty7mfOtW+kKEvL+j73aRpamoooP5wjpDOjR4VkyxHHNN03Gd/ox5QWSboqk/tjT+5rglqhcBo+nYymttcWxPB/rhRAFXQ85jApTqRohdZayNox1D9chp6fNoRS5luHSQbM5ZC0VtfrxwmLGlXmtqbPB4ha+ARVx2l1QsmNx1gXErUePY5Pjiqpn0+uaKTGnTQgTgHPnvq4WM6ahbocInV+P6dgIn5sVk/fQ0)"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="5"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! <ATTR_LINK
+#! IDENTIFIER="131077"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="327685"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196613"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="524293"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="7"
+#! TARGET_PORT_DESC="7"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="589829"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="8"
+#! TARGET_PORT_DESC="8"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="786437"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="11"
+#! TARGET_PORT_DESC="11"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262149"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="3"
+#! TARGET_PORT_DESC="3"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="393221"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="5"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="655365"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="9"
+#! TARGET_PORT_DESC="9"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65541"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="458757"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="6"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="720901"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="10"
+#! TARGET_PORT_DESC="10"
+#! />
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SERVER_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_USER_NAME_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_USE_SSPI_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1,MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1,DestDataset_POSTGIS_2,POSTGIS_OUT_WRITER_MODE_POSTGIS_2,POSTGIS_OUT_START_TRANSACTION_POSTGIS_2,POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_2,POSTGIS_OUT_BULK_COPY_POSTGIS_2,POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_2,POSTGIS_OUT_BEGIN_SQL_POSTGIS_2,POSTGIS_OUT_END_SQL_POSTGIS_2
+DEFAULT_MACRO SourceDataset_MSSQL_SPATIAL maximosde
+GUI Text SourceDataset_MSSQL_SPATIAL Source DATABASE Name:
+DEFAULT_MACRO DestDataset_POSTGIS_3 coa-gis-warehouse1b
+GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGIS_3 FMT:POSTGIS Connection:
+DEFAULT_MACRO MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszgpUEs46LbdeZJFWl8cHP1lXp2CMRSHSChZ6hTc2cS1DlMUD8BQ3NPGUtu8Y1rk0kExi/+eLoAWwn2VST2bNKAw67o+cx3zM/xUOydW1J6LVkfHqgYFivbQRClC9yty7mfOtW+kKEvL+j73aRpamoooP5wjpDOjR4VkyxHHNN03Gd/ox5QWSboqk/tjT+5rglqhcBo+nYymttcWxPB/rhRAFXQ85jApTqRohdZayNox1D9chp6fNoRS5luHSQbM5ZC0VtfrxwmLGlXmtqbPB4ha+ARVx2l1QsmNx1gXErUePY5Pjiqpn0+uaKTGnTQgTgHPnvq4WM6ahbocInV+P6dgIn5sVk/fQ0)
+GUI PASSWORD MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL Password:
+INCLUDE [ if {{$(SourceDataset_MSSQL_SPATIAL)} == {}} { puts_real {Parameter 'SourceDataset_MSSQL_SPATIAL' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_POSTGIS_3)} == {}} { puts_real {Parameter 'DestDataset_POSTGIS_3' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL)} == {}} { puts_real {Parameter 'MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MSSQL_SPATIAL
+READER_KEYWORD MSSQL_SPATIAL_1
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} POSTGIS
+MULTI_WRITER_KEYWORD{0} POSTGIS_2
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "MSSQL_SPATIAL_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER MSSQL_SPATIAL MSSQL_SPATIAL_1
+# ============================================================================
+# First get the dataset for the database. For SQL, it's the database name.
+# For now we'll use whatever they had when they generated this mapping file,
+# and not reprompt
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_MSSQL_SPATIAL_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER MSSQL_SPATIAL MSSQL_SPATIAL_1
+DEFAULT_MACRO SourceDataset_MSSQL_SPATIAL_1 $(SourceDataset_MSSQL_SPATIAL)
+GUI Text SourceDataset_MSSQL_SPATIAL_1 Source DATABASE Name:
+# ============================================================================
+# The ADO provider in use. For SQL Server, this is always MSSQL_ADO
+DEFAULT_MACRO MSSQL_SPATIAL_IN_PROVIDER_TYPE_MSSQL_SPATIAL_1
+MSSQL_SPATIAL_1_PROVIDER_TYPE "$(MSSQL_SPATIAL_IN_PROVIDER_TYPE_MSSQL_SPATIAL_1)"
+# ============================================================================
+# The location of the server (e.g.SERVERNAME,SERVERNAME\INSTANCE)
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SERVER_MSSQL_SPATIAL_1 coa-cmmsdb-vm
+MSSQL_SPATIAL_1_SERVER "$(MSSQL_SPATIAL_IN_SERVER_MSSQL_SPATIAL_1)"
+GUI TEXT MSSQL_SPATIAL_IN_SERVER_MSSQL_SPATIAL_1 Server:
+# ============================================================================
+# User name required if USE_SSPI is NO
+DEFAULT_MACRO MSSQL_SPATIAL_IN_USER_NAME_MSSQL_SPATIAL_1 maximogis
+MSSQL_SPATIAL_1_USER_NAME "$(MSSQL_SPATIAL_IN_USER_NAME_MSSQL_SPATIAL_1)"
+GUI TEXT MSSQL_SPATIAL_IN_USER_NAME_MSSQL_SPATIAL_1 User Name:
+# ============================================================================
+# Password, required if USE_SSPI is NO
+DEFAULT_MACRO MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL_1 $(MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL)
+MSSQL_SPATIAL_1_PASSWORD "$(MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL_1)"
+GUI PASSWORD MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL_1 Password:
+# ============================================================================
+# Use Windows Authentication?
+DEFAULT_MACRO MSSQL_SPATIAL_IN_USE_SSPI_MSSQL_SPATIAL_1 NO
+MSSQL_SPATIAL_1_USE_SSPI "$(MSSQL_SPATIAL_IN_USE_SSPI_MSSQL_SPATIAL_1)"
+GUI ACTIVECHECK MSSQL_SPATIAL_IN_USE_SSPI_MSSQL_SPATIAL_1 YES,MSSQL_SPATIAL_IN_USER_NAME,MSSQL_SPATIAL_IN_PASSWORD%NO Use Windows Authentication
+# ============================================================================
+# And an optional global WHERE clause
+DEFAULT_MACRO MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1 
+MSSQL_SPATIAL_1_WHERE_CLAUSE "$(MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1)"
+GUI OPTIONAL TEXT MSSQL_SPATIAL_IN_WHERE_CLAUSE_MSSQL_SPATIAL_1 Where Clause:
+# ============================================================================
+# bounding box with optional clipping
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1)"
+GUI FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINX_MSSQL_SPATIAL_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1)"
+GUI FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MINY_MSSQL_SPATIAL_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1)"
+GUI FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_MSSQL_SPATIAL_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1 0
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1)"
+GUI FLOAT MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_MSSQL_SPATIAL_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1 No
+MSSQL_SPATIAL_1_CLIP_TO_ENVELOPE "$(MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1)"
+GUI CHECKBOX MSSQL_SPATIAL_IN_CLIP_TO_ENVELOPE_MSSQL_SPATIAL_1 YES%NO Clip to Search Envelope
+# ============================================================================
+# Search Envelope Coordinate System
+DEFAULT_MACRO MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1 
+GUI OPTIONAL COORDSYS MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1 Search Envelope Coordinate System:
+MSSQL_SPATIAL_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(MSSQL_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_MSSQL_SPATIAL_1)"
+# ============================================================================
+# This keyword controls how many records to retrieve at one time into local
+# memory from the provider
+DEFAULT_MACRO MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1 10
+GUI OPTIONAL TEXT MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1 Number Of Records To Fetch At A Time:
+MSSQL_SPATIAL_1_READ_CACHE_SIZE $(MSSQL_SPATIAL_IN_READ_CACHE_SIZE_MSSQL_SPATIAL_1)
+# ============================================================================
+# Command time out. Indicates in seconds, how long to wait for a command
+# (sqlquery) to execute before terminating the attempt and generating an error.
+DEFAULT_MACRO MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1 
+GUI OPTIONAL TEXT MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1 Command Timeout (Seconds):
+MSSQL_SPATIAL_1_COMMAND_TIMEOUT "$(MSSQL_SPATIAL_IN_COMMAND_TIMEOUT_MSSQL_SPATIAL_1)"
+# ============================================================================
+# Assume that geometry columns have exactly one SRID?
+DEFAULT_MACRO MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1 
+GUI OPTIONAL CHOICE MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1 YES%NO Geometry Columns Have Exactly One SRID:
+MSSQL_SPATIAL_1_ASSUME_ONE_SRID_PER_COL "$(MSSQL_SPATIAL_IN_ASSUME_ONE_SRID_PER_COL_MSSQL_SPATIAL_1)"
+# ============================================================================
+# The following specifies whether to create a persistent connection. If set
+# to YES, the connection will remain open until FME is shut down.
+DEFAULT_MACRO MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1 NO
+GUI CHOICE MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1 YES%NO Make Connection Persistent:
+MSSQL_SPATIAL_1_PERSISTENT_CONNECTION $(MSSQL_SPATIAL_IN_PERSISTENT_CONNECTION_MSSQL_SPATIAL_1)
+MSSQL_SPATIAL_1_DATASET "$(SourceDataset_MSSQL_SPATIAL_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POSTGIS_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER POSTGIS POSTGIS_2
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_POSTGIS_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER POSTGIS POSTGIS_2
+DEFAULT_MACRO DestDataset_POSTGIS_2 $(DestDataset_POSTGIS_3)
+GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGIS_2 FMT:POSTGIS Connection:
+# ============================================================================
+# Write geometry (planar) or geography (geodetic) column
+DEFAULT_MACRO POSTGIS_OUT_SPATIAL_COLUMN_TYPE_POSTGIS_2 geometry
+POSTGIS_2_SPATIAL_COLUMN_TYPE "$(POSTGIS_OUT_SPATIAL_COLUMN_TYPE_POSTGIS_2)"
+# ============================================================================
+# Default spatial column name
+DEFAULT_MACRO POSTGIS_OUT_SPATIAL_COLUMN_NAME_POSTGIS_2 shape
+POSTGIS_2_SPATIAL_COLUMN_NAME "$(POSTGIS_OUT_SPATIAL_COLUMN_NAME_POSTGIS_2)"
+DEFAULT_MACRO POSTGIS_OUT_GENERIC_GEOMETRY_POSTGIS_2 no
+POSTGIS_2_GENERIC_GEOMETRY "$(POSTGIS_OUT_GENERIC_GEOMETRY_POSTGIS_2)"
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO POSTGIS_OUT_DESTINATION_DATASETTYPE_VALIDATION_POSTGIS_2 Yes
+POSTGIS_2_DESTINATION_DATASETTYPE_VALIDATION "$(POSTGIS_OUT_DESTINATION_DATASETTYPE_VALIDATION_POSTGIS_2)"
+DEFAULT_MACRO POSTGIS_OUT_COORDINATE_SYSTEM_GRANULARITY_POSTGIS_2 FEATURE_TYPE
+POSTGIS_2_COORDINATE_SYSTEM_GRANULARITY "$(POSTGIS_OUT_COORDINATE_SYSTEM_GRANULARITY_POSTGIS_2)"
+DEFAULT_MACRO POSTGIS_OUT_WRITER_MODE_POSTGIS_2 INSERT
+GUI CHOICE POSTGIS_OUT_WRITER_MODE_POSTGIS_2 INSERT%UPDATE%DELETE Writer Mode:
+POSTGIS_2_WRITER_MODE $(POSTGIS_OUT_WRITER_MODE_POSTGIS_2)
+DEFAULT_MACRO POSTGIS_OUT_START_TRANSACTION_POSTGIS_2 0
+GUI TEXT POSTGIS_OUT_START_TRANSACTION_POSTGIS_2 Starting Feature:
+POSTGIS_2_START_TRANSACTION $(POSTGIS_OUT_START_TRANSACTION_POSTGIS_2)
+DEFAULT_MACRO POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_2 1000
+GUI TEXT POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_2 Features Per Transaction:
+POSTGIS_2_TRANSACTION_INTERVAL $(POSTGIS_OUT_TRANSACTION_INTERVAL_POSTGIS_2)
+DEFAULT_MACRO POSTGIS_OUT_BULK_COPY_POSTGIS_2 YES
+GUI CHOICE POSTGIS_OUT_BULK_COPY_POSTGIS_2 YES%NO Bulk Copy Insert:
+POSTGIS_2_BULK_COPY $(POSTGIS_OUT_BULK_COPY_POSTGIS_2)
+DEFAULT_MACRO POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_2 NO
+GUI CHOICE POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_2 YES%NO Insert WKT:
+POSTGIS_2_INSERT_TEXT_GEOMETRY $(POSTGIS_OUT_INSERT_TEXT_GEOMETRY_POSTGIS_2)
+DEFAULT_MACRO POSTGIS_OUT_BEGIN_SQL_POSTGIS_2 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGIS_OUT_BEGIN_SQL_POSTGIS_2 SQL Statement to Execute Before Translation:
+POSTGIS_2_BEGIN_SQL "$(POSTGIS_OUT_BEGIN_SQL_POSTGIS_2)"
+DEFAULT_MACRO POSTGIS_OUT_END_SQL_POSTGIS_2 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGIS_OUT_END_SQL_POSTGIS_2 SQL Statement to Execute After Translation:
+POSTGIS_2_END_SQL "$(POSTGIS_OUT_END_SQL_POSTGIS_2)"
+POSTGIS_2_DATASET "$(DestDataset_POSTGIS_2)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "C:\jobs\MAXIMO2WAREHOUSE_maximo_redline_layer.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_MSSQL_SPATIAL_1 MSSQL_SPATIAL_1
+DEFAULT_MACRO DATASET_KEYWORD_POSTGIS_2 POSTGIS_2
+FME_PASSWORD_PARAMETER_LIST MSSQL_SPATIAL_IN_PASSWORD_MSSQL_SPATIAL
+# -------------------------------------------------------------------------
+
+MSSQL_SPATIAL_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME MAXIMO2WAREHOUSE_maximo_redline_layer
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+MSSQL_SPATIAL_1_DEF maximogis.redlinelayer   mssql_sql_statement          ""   mssql_where_clause           ""   id                           identity   create_dt                    datetime   status                       smallint   priority                     smallint   xml_data                     image   create_by                    varchar(30)   modified_dt                  datetime   modified_by                  varchar(30)   parent_redline_id            integer   editor_uname                 varchar(50)   complete_dt                  datetime   comment_text                 varchar(1000)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *       @SupplyAttributes(multi_reader_keyword,MSSQL_SPATIAL_1)    ROUTE MSSQL_SPATIAL MSSQL_SPATIAL_1::maximogis.redlinelayer TO FME_GENERIC ::maximogis.redlinelayer ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+MSSQL_SPATIAL_1_MERGE_DEF MSSQL_SPATIAL_1::maximogis.redlinelayer EXACT maximogis.redlinelayer
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC maximogis.redlinelayer TO POSTGIS __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>objectid<comma>id<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>coagis.maximo_redline_layer<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+POSTGIS_2_DEF coagis.maximo_redline_layer   postgis_type                 postgis_multipolygon   postgis_mode                 INHERIT_FROM_WRITER   postgis_sql_key_columns      ""   postgis_spatial_column_type  geometry   postgis_spatial_column       shape   postgis_srid                 ""   postgis_drop_table           NO   postgis_truncate_table       YES   postgis_create_with_oids     NO   postgis_create_gist_index    YES   postgis_vacuum_analyze       NO   postgis_allow_serial_writing NO   objectid                     int4,PRIKEY   create_dt                    timestamp   status                       int2   priority                     int2   xml_data                     bytea   create_by                    varchar(30)   modified_dt                  timestamp   modified_by                  varchar(30)   parent_redline_id            int4   editor_uname                 varchar(50)   complete_dt                  timestamp   comment_text                 varchar(1000)

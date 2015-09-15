@@ -1,0 +1,897 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\FME\fme.exe C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\edit_to_warehouse_table\workbench\warehouse2csv_bc_address_2_govqa.fmw
+#          --DestDataset_CSV "\\coa-cms\FTPfolders\ITSDept\GIS\govqa"
+#          --SourceDataset_POSTGRES_3 "coa-gis-warehouse1b"
+#    
+#    
+#! DOC_TOP_LEFT="-107.002 -184"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! FME_DOCUMENT_PRIORGUID=""
+#! FME_BUILD_NUM="15515"
+#! FME_DOCUMENT_GUID="7ffc66af-a454-4029-80c3-9b21d8ec283a"
+#! LOG_FILE="C:\jobs\warehouse2csv_bc_address_2_govqa.log"
+#! LAST_SAVE_BUILD="FME(R) 2015.1.1.0 (20150715 - Build 15515 - WIN32)"
+#! CATEGORY=""
+#! DESTINATION="NONE"
+#! MAX_LOG_FEATURES="200"
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! END_TCL=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESCRIPTION=""
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! USAGE=""
+#! FME_SERVER_SERVICES=""
+#! BEGIN_TCL=""
+#! SOURCE="NONE"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
+#! SOURCE_ROUTING_FILE=""
+#! HISTORY=""
+#! LOG_MAX_PRECISION="Yes"
+#! WORKSPACE_VERSION="1"
+#! PASSWORD=""
+#! REQUIREMENTS=""
+#! REQUIREMENTS_KEYWORD=""
+#! END_PYTHON=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! ZOOM_SCALE="100"
+#! DOC_EXTENTS="1210 83.5073"
+#! LAST_SAVE_DATE="2015-09-14T11:51:09"
+#! REDIRECT_TERMINATORS="NONE"
+#! VIEW_POSITION="0 0"
+#! IGNORE_READER_FAILURE="No"
+#! SHOW_INFO_NODES="true"
+#! BEGIN_PYTHON=""
+#! SHOW_ANNOTATIONS="true"
+#! TITLE=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! ATTR_TYPE_ENCODING="SDF"
+#! LEGAL_TERMS_CONDITIONS=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="POSTGRES"
+#! DATASET="$(SourceDataset_POSTGRES_3)"
+#! KEYWORD="POSTGRES_2"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="postgres_type {FME_GEN_GEOMETRY} postgres_sql_where_clause &quot;&quot; postgres_sql_statement &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_sweep_angle float8 fme_text_size float8 multi_reader_keyword char(50) fme_primary_axis float8 fme_text_string char(50) fme_rotation float8 fme_dataset char(50) multi_reader_id int4 fme_type char(50) postgres_type char(50) fme_basename char(50) fme_start_angle float8 multi_reader_full_id int4 postgres_oid int4 fme_feature_type char(50) multi_reader_type char(50) fme_color char(50) fme_fill_color char(50) fme_geometry fme_char(50) fme_secondary_axis float8"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL TEXT_EDIT_SQL_CFG postgres_sql_where_clause MODE,WHERE WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT_EDIT_SQL_CFG postgres_sql_statement MODE,SQL SELECT Statement&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES="BTREE RTREE HASH PRIKEY"
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DATABASE"
+#! GENERATE_FME_BUILD_NUM="15515"
+#! FEATURE_TYPES=""
+#! MIN_FEATURES=""
+#! COORDSYS=""
+#! START_FEATURE=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! MAX_FEATURES=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="Database"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="Table1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="CSV"
+#! DATASET="$(DestDataset_CSV)"
+#! KEYWORD="CSV_1"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="32"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="csv_append_mode INHERIT_FROM_WRITER csv_field_names INHERIT_FROM_WRITER"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size number(31,15) fme_type char(50) fme_secondary_axis number(31,15) fme_text_string char(50) fme_basename char(50) fme_start_angle number(31,15) fme_sweep_angle number(31,15) fme_color char(50) fme_dataset char(50) fme_primary_axis number(31,15) fme_geometry fme_char(50) fme_rotation number(31,15) fme_fill_color char(50) fme_feature_type char(50)"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL CHOICE csv_append_mode INHERIT_FROM_WRITER%yes%no Append to file&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL CHOICE csv_field_names INHERIT_FROM_WRITER%yes%no Output Field Names&quot; INHERIT_FROM_WRITER "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=". %-#[]&quot;()!?*&apos;&amp;+\/"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="5660"
+#! FANOUT_DIRECTORY=""
+#! COORDSYS=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_SUFFIX=""
+#! FANOUT="No"
+#! FANOUT_PREFIX=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bool"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_int16"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="serial"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float4"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="money"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_real64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="timetz"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="timestamp"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="timestamptz"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bytea"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="numeric(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="numeric(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="uuid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bit(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varbit"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varbit(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(254)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="CSV"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postrgres_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_map"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="CSV"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="coagis.bc_address_govqa_view"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="10"
+#! FEAT_GEOMTYPE="csv_none"
+#! POSITION="1103 -184"
+#! BOUNDING_RECT="1103 -184 0 0"
+#! ORDER="10"
+#! COLLAPSED="false"
+#! KEYWORD="CSV_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="cid" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="add1" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="add2" ATTR_TYPE="char(250)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="city" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="state" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="zip" ATTR_TYPE="number(11,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="y" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="x" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="csv_append_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! <DEFLINE_PARM PARM_NAME="csv_field_names" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="coagis.bc_address_govqa_view"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER="coagis"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="4"
+#! FEAT_GEOMTYPE="postgres_none"
+#! POSITION="-107.002 -100.493"
+#! BOUNDING_RECT="-107.002 -100.493 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="POSTGRES_2"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="shape" ATTR_TYPE="" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="objectid" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="cid" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="add1" ATTR_TYPE="varchar(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="add2" ATTR_TYPE="varchar(250)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="city" ATTR_TYPE="varchar(250)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="state" ATTR_TYPE="varchar(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="zip" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="y" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="x" ATTR_TYPE="numeric(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgres_sql_statement" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgres_sql_where_clause" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME DestDataset_CSV CSV File Directory:"
+#! DEFAULT_VALUE="\\coa-cms\FTPfolders\ITSDept\GIS\govqa"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_POSTGRES_3 FMT:POSTGRES Connection:"
+#! DEFAULT_VALUE="coa-gis-warehouse1b"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="5"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! <ATTR_LINK
+#! IDENTIFIER="262149"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="5"
+#! TARGET_PORT_DESC="3"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65541"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="2"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="524293"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="9"
+#! TARGET_PORT_DESC="7"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="458757"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="8"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="393221"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="7"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131077"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="3"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="327685"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="6"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196613"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_POSTGRES_2,POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_2,POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_2,POSTGRES_IN_BEGIN_SQL_POSTGRES_2,POSTGRES_IN_END_SQL_POSTGRES_2,DestDataset_CSV_1,CSV_OUT_APPEND_CSV_1,CSV_OUT_FIELD_NAMES_CSV_1,CSV_OUT_SEPARATOR_CSV_1,CSV_OUT_EXTENSION_CSV_1,_OUT_QUOTE_OUTPUT_CSV_1,_QUOTE_FIELD_NAMES_CSV_1,CSV_OUT_ENCODING_CSV_1,CSV_OUT_END_OF_LINE_CSV_1
+DEFAULT_MACRO DestDataset_CSV \\coa-cms\FTPfolders\ITSDept\GIS\govqa
+GUI DIRNAME DestDataset_CSV CSV File Directory:
+DEFAULT_MACRO SourceDataset_POSTGRES_3 coa-gis-warehouse1b
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_POSTGRES_3 FMT:POSTGRES Connection:
+INCLUDE [ if {{$(DestDataset_CSV)} == {}} { puts_real {Parameter 'DestDataset_CSV' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_POSTGRES_3)} == {}} { puts_real {Parameter 'SourceDataset_POSTGRES_3' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE POSTGRES
+READER_KEYWORD POSTGRES_2
+READER_GEN_DIRECTIVES QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,EXPOSE_ATTRS_GROUP,,POSTGRES_EXPOSE_FORMAT_ATTRS,,_MERGE_SCHEMAS,YES,SCHEMALIST,coagis,TABLELIST,coagis.bc_address_govqa_view,FME_CONNECTION_GROUP,,NAMED_CONNECTION,coa-gis-warehouse1b
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} CSV
+MULTI_WRITER_KEYWORD{0} CSV_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POSTGRES_2"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER POSTGRES POSTGRES_2
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_POSTGRES_2 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER POSTGRES POSTGRES_2
+DEFAULT_MACRO SourceDataset_POSTGRES_2 $(SourceDataset_POSTGRES_3)
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_POSTGRES_2 FMT:POSTGRES Connection:
+DEFAULT_MACRO POSTGRES_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_POSTGRES_2 Yes
+POSTGRES_2_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(POSTGRES_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_POSTGRES_2)"
+DEFAULT_MACRO POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_2 
+POSTGRES_2_EXPOSE_ATTRS_GROUP "$(POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_2)"
+GUI DISCLOSUREGROUP POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_2 POSTGRES_EXPOSE_FORMAT_ATTRS Schema Attributes
+DEFAULT_MACRO POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_2 10000
+GUI FLOAT POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_2 Number Of Records To Fetch At A Time:
+POSTGRES_2_FEATURES_PER_FETCH $(POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_2)
+DEFAULT_MACRO POSTGRES_IN_BEGIN_SQL_POSTGRES_2 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGRES_IN_BEGIN_SQL_POSTGRES_2 SQL Statement to Execute Before Translation:
+POSTGRES_2_BEGIN_SQL "$(POSTGRES_IN_BEGIN_SQL_POSTGRES_2)"
+DEFAULT_MACRO POSTGRES_IN_END_SQL_POSTGRES_2 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGRES_IN_END_SQL_POSTGRES_2 SQL Statement to Execute After Translation:
+POSTGRES_2_END_SQL "$(POSTGRES_IN_END_SQL_POSTGRES_2)"
+POSTGRES_2_DATASET "$(SourceDataset_POSTGRES_2)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_1
+# ============================================================================
+# The following GUI line prompts for a directory where the
+# CSV files will be stored
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_CSV_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_1
+DEFAULT_MACRO DestDataset_CSV_1 $(DestDataset_CSV)
+GUI DIRNAME DestDataset_CSV_1 CSV File Directory:
+# =====================================================================
+# Allows one to append
+DEFAULT_MACRO CSV_OUT_APPEND_CSV_1 No
+CSV_1_APPEND "$(CSV_OUT_APPEND_CSV_1)"
+GUI CHECKBOX CSV_OUT_APPEND_CSV_1 Yes%No Append to file
+# ============================================================================
+# The following determines whether field names will be written on
+# the first row of the file.
+DEFAULT_MACRO CSV_OUT_FIELD_NAMES_CSV_1 yes
+CSV_1_FIELD_NAMES "$(CSV_OUT_FIELD_NAMES_CSV_1)"
+GUI CHECKBOX CSV_OUT_FIELD_NAMES_CSV_1 yes%no Output field names on first line
+# ============================================================================
+# The following determines the field seperator
+DEFAULT_MACRO CSV_OUT_SEPARATOR_CSV_1 ,
+CSV_1_SEPARATOR "$(CSV_OUT_SEPARATOR_CSV_1)"
+GUI OPTIONAL TEXT CSV_OUT_SEPARATOR_CSV_1 Separator character:
+# ============================================================================
+# The following determines the extension for output CSV files
+DEFAULT_MACRO CSV_OUT_EXTENSION_CSV_1 csv
+CSV_1_EXTENSION "$(CSV_OUT_EXTENSION_CSV_1)"
+GUI TEXT CSV_OUT_EXTENSION_CSV_1 Extension:
+# ============================================================================
+# The following specifies if output values should be quoted
+DEFAULT_MACRO _OUT_QUOTE_OUTPUT_CSV_1 if_needed
+GUI CHOICE _OUT_QUOTE_OUTPUT_CSV_1 yes%if_needed%no Quote Output Values:
+CSV_1_QUOTE_OUTPUT $(_OUT_QUOTE_OUTPUT_CSV_1)
+# ============================================================================
+# The following choice determines if field names on the first row
+# should be quoted or not.
+DEFAULT_MACRO _QUOTE_FIELD_NAMES_CSV_1 no
+GUI CHOICE _QUOTE_FIELD_NAMES_CSV_1 yes%no Quote Field Names:
+CSV_1_QUOTE_FIELD_NAMES $(_QUOTE_FIELD_NAMES_CSV_1)
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO CSV_OUT_ENCODING_CSV_1 
+GUI OPTIONAL STRING_OR_CHOICE CSV_OUT_ENCODING_CSV_1 UTF-8%UTF-16LE%UTF-16BE%ANSI%BIG5%SJIS%CP437%CP708%CP720%CP737%CP775%CP850%CP852%CP855%CP857%CP860%CP861%CP862%CP863%CP864%CP865%CP866%CP869%CP932%CP936%CP950%CP1250%CP1251%CP1252%CP1253%CP1254%CP1255%CP1256%CP1257%CP1258%ISO8859-1%ISO8859-2%ISO8859-3%ISO8859-4%ISO8859-5%ISO8859-6%ISO8859-7%ISO8859-8%ISO8859-9%ISO8859-13%ISO8859-15 Character Encoding:
+CSV_1_ENCODING $(CSV_OUT_ENCODING_CSV_1)
+# =====================================================================
+# Allows to set Line termination type
+DEFAULT_MACRO CSV_OUT_END_OF_LINE_CSV_1 
+GUI OPTIONAL CHOICE CSV_OUT_END_OF_LINE_CSV_1 Windows%Unix%Macintosh Line Termination:
+CSV_1_END_OF_LINE $(CSV_OUT_END_OF_LINE_CSV_1)
+CSV_1_DATASET "$(DestDataset_CSV_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "C:\jobs\warehouse2csv_bc_address_2_govqa.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_POSTGRES_2 POSTGRES_2
+DEFAULT_MACRO DATASET_KEYWORD_CSV_1 CSV_1
+# -------------------------------------------------------------------------
+
+POSTGRES_2_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME warehouse2csv_bc_address_2_govqa
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *       @SupplyAttributes(multi_reader_keyword,POSTGRES_2)    ROUTE POSTGRES POSTGRES_2::coagis.bc_address_govqa_view TO FME_GENERIC ::coagis.bc_address_govqa_view ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+POSTGRES_2_MERGE_DEF POSTGRES_2::coagis.bc_address_govqa_view EXACT coagis.bc_address_govqa_view DEFLINE postgres_type,postgres_none,postgres_sql_where_clause,,postgres_sql_statement,,objectid,int4,cid,numeric<openparen>38<comma>8<closeparen>,add1,varchar<openparen>40<closeparen>,add2,varchar<openparen>250<closeparen>,city,varchar<openparen>250<closeparen>,state,varchar<openparen>2<closeparen>,zip,int4,y,numeric<openparen>38<comma>8<closeparen>,x,numeric<openparen>38<comma>8<closeparen>
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC coagis.bc_address_govqa_view TO CSV __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>coagis.bc_address_govqa_view<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+CSV_1_DEF coagis.bc_address_govqa_view   csv_append_mode              INHERIT_FROM_WRITER   csv_field_names              INHERIT_FROM_WRITER   cid                          number(31,15)   add1                         char(40)   add2                         char(250)   city                         char(4)   state                        char(2)   zip                          number(11,0)   y                            number(31,15)   x                            number(31,15)

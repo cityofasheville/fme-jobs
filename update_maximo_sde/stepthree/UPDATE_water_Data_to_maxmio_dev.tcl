@@ -1,6 +1,6 @@
 #!/usr/bin/env fme
 
-set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/update_maximo_sde/workbench/MAXIMOSDE_add_data.fmw}
+set workspacename {C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/update_maximo_sde/workbench/UPDATE_water_Data_to_maxmio_dev.fmw}
 
 set destDirList {}
 set recreateSourceTree "no"
@@ -9,7 +9,7 @@ set superBatchFileName [FME_TempFilename]
 
 set superBatchFile [open $superBatchFileName "w"]
 
-lappend sourceDatasets {maximosde}
+lappend sourceDatasets {maximosde_dev}
 
 set logStandardOut {}
 set logTimings {}
