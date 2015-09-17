@@ -1,0 +1,117 @@
+2015-09-17 09:48:43|   0.0|  0.0|INFORM|FME 2015.1.1.0 (20150715 - Build 15515 - WIN32)
+2015-09-17 09:48:43|   0.0|  0.0|INFORM|FME_HOME is 'C:\FME\'
+2015-09-17 09:48:43|   0.0|  0.0|INFORM|FME Desktop ESRI Edition (floating)
+2015-09-17 09:48:43|   0.0|  0.0|INFORM|Permanent License.
+2015-09-17 09:48:43|   0.0|  0.0|INFORM|Machine host name is: coa-gis-fme1
+2015-09-17 09:48:43|   0.0|  0.0|INFORM|START - ProcessID: 3616, peak process memory usage: 39596 kB, current process memory usage: 39596 kB
+2015-09-17 09:48:43|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\FME\fme.exe' `C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/edit_to_warehouse_fc/workbench\wb-xlate-1442497721983_2768' `LOG_STANDARDOUT' `YES' `LogCountServerName' `{6084428c-d4aa-4ff0-a3c9-7291f69dc65f}'
+2015-09-17 09:48:43|   0.1|  0.1|INFORM|Shared folders for formats are : C:\FME\datasources;C:\Users\mssqlgisadmin\Documents\FME\Formats
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Shared folders for transformers are : C:\FME\transformers;C:\Users\mssqlgisadmin\AppData\Roaming\Safe Software\FME\FME Store\Transformers;C:\Users\mssqlgisadmin\Documents\FME\Transformers
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\mssqlgisadmin\Documents\FME\CoordinateSystems
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\mssqlgisadmin\Documents\FME\CoordinateSystemExceptions
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\mssqlgisadmin\Documents\FME\CoordinateSystemGridOverrides
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\mssqlgisadmin\Documents\FME\CsmapTransformationExceptions
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\mssqlgisadmin\Documents\FME\TransformerCategories
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Reader Keyword is `POSTGIS_1'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Writer Keyword is `MULTI_WRITER'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `MULTI_WRITER_DEF'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Reader type is `POSTGIS'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Current working folder is `C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\edit_to_warehouse_fc\workbench'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\MSSQLG~1\AppData\Local\Temp\2'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: FME_HOME is `C:\FME\'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\edit_to_warehouse_fc\workbench/'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'coa_fee_in_lieu_areas.fmw'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2015.1.1.0'
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|System Status: 48.91 GB of disk space available in the FME temporary folder (C:\Users\MSSQLG~1\AppData\Local\Temp\2)
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|System Status: 4.00 GB of virtual memory available
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Operating System: Microsoft Windows Server 2012 R2 Server 4.0 64-bit  (Build 9600)
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Platform: WIN32
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Locale: en_US
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|Code Page: 1252  (ANSI - Latin I)
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Process limits are 3.91 GB of physical memory and 4.00 GB of address space
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Start freeing memory when process usage exceeds 2.34 GB of memory or 3.41 GB of address space
+2015-09-17 09:48:43|   0.1|  0.0|INFORM|FME Configuration: Stop freeing memory when process usage is below 1.76 GB of memory and 2.56 GB of address space
+2015-09-17 09:48:43|   0.2|  0.1|INFORM|Creating writer for format: 
+2015-09-17 09:48:43|   0.3|  0.1|INFORM|FME Configuration: Named Connection Storage: 'C:\Users\mssqlgisadmin\AppData\Roaming\Safe Software\FME'
+2015-09-17 09:48:43|   0.3|  0.0|INFORM|FME Configuration: Using Named Connection values from 'coa-gis-edit1' for POSTGIS_1
+2015-09-17 09:48:43|   0.3|  0.0|INFORM|Creating reader for format: PostGIS
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|Loaded module 'POSTGIS' from file 'C:\FME\plugins/POSTGIS.dll'
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|FME API version of module 'POSTGIS' matches current internal version (3.7 20150407)
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|Opening POSTGIS reader for dataset 'coagisedit'
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|PostgreSQL 9.2.10 on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-11), 64-bit
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|2.1 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|Using MultiWriter $Revision$ ( $Date$ ) with keyword `MULTI_WRITER' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\FME\plugins/LogCount_func.dll'
+2015-09-17 09:48:43|   0.4|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (3.7 20150407)
+2015-09-17 09:48:43|   0.5|  0.0|INFORM|Creating writer for format: FME Feature Store (FFS)
+2015-09-17 09:48:43|   0.5|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2015-09-17 09:48:43|   0.5|  0.0|INFORM|Reading POSTGIS table: 'coagis.coa_fee_in_lieu_areas'...
+2015-09-17 09:48:43|   0.5|  0.0|INFORM|FME Configuration: Source coordinate system for reader POSTGIS_1[POSTGIS] set to `EPSG:2264' as read from input data
+2015-09-17 09:48:44|   0.8|  0.3|INFORM|Coordinate System `EPSG:2264' parameters: CS_NAME=`NC83F' DESC_NM=`NAD83 North Carolina State Planes, US Foot' DT_NAME=`NAD83' GROUP=`SPCS83F' MAP_SCL=`1' MAX_LAT=`36.8666666666667' MAX_LNG=`-74.2666666666667' MIN_LAT=`33.55' MIN_LNG=`-85.4333333333333' ORG_LAT=`33.75' ORG_LNG=`-79' PARM1=`36.1666666666667' PARM2=`34.3333333333333' PROJ=`LM' QUAD=`1' SCL_RED=`1' SOURCE=`Calculated from NC83 by Mentor Software' UNIT=`FOOT' X_OFF=`2000000.00261667' 
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|FME Configuration: Using Named Connection values from 'coa-gis-warehouse1' for POSTGIS_2
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|Creating writer for format: PostGIS
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGIS'
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|FME API version of module 'POSTGIS' matches current internal version (3.7 20150407)
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|FME API version of module 'POSTGIS' matches current internal version (3.7 20150407)
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|Writer `POSTGIS_2' of type `POSTGIS' using group definition keyword `POSTGIS_2_DEF'
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|FME API version of module 'POSTGIS' matches current internal version (3.7 20150407)
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|Opening POSTGIS writer for dataset 'coagiswarehouse'...
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|PostgreSQL 9.2.9 on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-4), 64-bit
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|2.1 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|Testing for the existence of table 'coagis.coa_fee_in_lieu_areas'...
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|Truncating existing table 'coagis.coa_fee_in_lieu_areas'...
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|Using existing table 'coagis.coa_fee_in_lieu_areas'
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|POSTGIS Writer: Creating 'unquoted WKB' geometry processor for feature type 'coagis.coa_fee_in_lieu_areas'
+2015-09-17 09:48:44|   0.8|  0.0|INFORM|POSTGIS Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'coagis.coa_fee_in_lieu_areas'
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|Emptying factory pipeline
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Router and Unexpected Input Remover(RoutingFactory): Tested 2 input feature(s), wrote 2 output feature(s): 2 matched merge filters, 2 were routed to output, 0 could not be routed.
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Unexpected Input Remover Nuker(TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2015-09-17 09:48:44|   0.9|  0.0|STATS |coagis.coa_fee_in_lieu_areas Feature Counter -1 3(TeeFactory): Cloned 2 input feature(s) into 2 output feature(s)
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Destination Feature Type Routing Correlator(RoutingFactory): Tested 2 input feature(s), wrote 2 output feature(s): 0 matched merge filters, 2 were routed to output, 0 could not be routed.
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Final Output Nuker(TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|Feature output statistics for `FFS' writer using keyword `W_1':
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |                               Features Written
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |==============================================================================
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Total Features Written                                                       0
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|1 feature(s) coerced to MULTIPOLYGON in table 'coagis.coa_fee_in_lieu_areas'
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|Successfully closed POSTGIS database writer
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|Feature output statistics for `POSTGIS' writer using keyword `POSTGIS_2':
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |                               Features Written
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |coagis.coa_fee_in_lieu_areas                                                 2
+2015-09-17 09:48:44|   0.9|  0.0|STATS |==============================================================================
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Total Features Written                                                       2
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |                            Features Read Summary
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |coagis.coa_fee_in_lieu_areas                                                 2
+2015-09-17 09:48:44|   0.9|  0.0|STATS |==============================================================================
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Total Features Read                                                          2
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |                           Features Written Summary
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|STATS |coagis.coa_fee_in_lieu_areas                                                 2
+2015-09-17 09:48:44|   0.9|  0.0|STATS |==============================================================================
+2015-09-17 09:48:44|   0.9|  0.0|STATS |Total Features Written                                                       2
+2015-09-17 09:48:44|   0.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|Successfully closed POSTGIS database reader
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|Successfully closed POSTGIS database reader
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|Translation was SUCCESSFUL with 0 warning(s) (2 feature(s) output)
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|FME Session Duration: 1.3 seconds. (CPU: 0.6s user, 0.2s system)
+2015-09-17 09:48:44|   0.9|  0.0|INFORM|END - ProcessID: 3616, peak process memory usage: 90508 kB, current process memory usage: 89060 kB
