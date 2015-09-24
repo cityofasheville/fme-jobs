@@ -1,0 +1,909 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\FME\fme.exe C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\edit_to_warehouse_table\workbench\coa_leaf_collection_areas_table.fmw
+#          --SourceDataset_POSTGRES "coa-gis-edit1b"
+#          --DestDataset_POSTGRES "coa-gis-warehouse1b"
+#    
+#    
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! MAX_LOG_FEATURES="200"
+#! REQUIREMENTS_KEYWORD=""
+#! FME_DOCUMENT_PRIORGUID="3bb136ac-f478-4966-b38e-884bcece6cfb,a89d3392-57e8-472e-92cd-f43a631e87f0,c01e8f53-57a1-4889-89d3-42e8e629f026,bcf98f28-8a44-4cd3-82e0-0c8c4a748c37,55e8f92b-64d2-48a1-850e-d59515e1a594,0c7d0658-4e78-437e-94ac-6a6cd19675f9,028f1639-9a11-4e8c-8601-a1a7ddc89dcc,e0ed4732-01c3-46e2-a773-3db6707b4bdd,0c331dfb-048a-447e-b4c2-0e59661212b2,0f78c1e6-df5e-4b74-a621-103f5b226148,35381545-ec19-4633-adf2-e505412d3ed6,573a10ee-e9d0-4b81-90ff-23af1a2811d1,1faa1fbc-26dc-42a4-9266-4c50c8e36207,2b196134-9620-4b45-979d-6dbd1cf9fbab"
+#! LOG_FILE="C:\jobs\coa_leaf_collection_areas_table.log"
+#! CATEGORY=""
+#! END_PYTHON=""
+#! SHOW_ANNOTATIONS="true"
+#! DESTINATION="NONE"
+#! END_TCL=""
+#! REDIRECT_TERMINATORS="NONE"
+#! ZOOM_SCALE="110"
+#! DESCRIPTION=""
+#! BEGIN_TCL=""
+#! TITLE=""
+#! LAST_SAVE_DATE="2015-09-22T10:48:38"
+#! SHOW_INFO_NODES="true"
+#! ATTR_TYPE_ENCODING="SDF"
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! HISTORY=""
+#! FME_SERVER_SERVICES=""
+#! IGNORE_READER_FAILURE="No"
+#! FME_BUILD_NUM="15515"
+#! REQUIREMENTS=""
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! PASSWORD=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! SOURCE="NONE"
+#! SOURCE_ROUTING_FILE=""
+#! VIEW_POSITION="-5165.51 16.3638"
+#! DOC_EXTENTS="1579.57 140.958"
+#! DESTINATION_ROUTING_FILE=""
+#! LAST_SAVE_BUILD="FME(R) 2015.1.1.0 (20150715 - Build 15515 - WIN32)"
+#! BEGIN_PYTHON=""
+#! USAGE=""
+#! LOG_MAX_PRECISION="Yes"
+#! WORKSPACE_VERSION="1"
+#! FME_DOCUMENT_GUID="2c14fde3-6c5f-4127-a3b8-cc5a61befcc8"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! FME_REPROJECTION_ENGINE="FME"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! DOC_TOP_LEFT="-5050.14 -354.594"
+#! LEGAL_TERMS_CONDITIONS=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="POSTGRES"
+#! DATASET="$(SourceDataset_POSTGRES)"
+#! KEYWORD="POSTGRES_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="postgres_type {FME_GEN_GEOMETRY} postgres_sql_where_clause &quot;&quot; postgres_sql_statement &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="postgres_oid int4 postgres_type char(50) fme_basename char(50) fme_dataset char(50) fme_start_angle float8 fme_geometry fme_char(50) multi_reader_full_id int4 multi_reader_type char(50) fme_type char(50) fme_secondary_axis float8 fme_sweep_angle float8 fme_text_size float8 fme_color char(50) fme_rotation float8 fme_primary_axis float8 fme_text_string char(50) multi_reader_keyword char(50) multi_reader_id int4 fme_fill_color char(50) fme_feature_type char(50)"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL TEXT_EDIT_SQL_CFG postgres_sql_where_clause MODE,WHERE WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT_EDIT_SQL_CFG postgres_sql_statement MODE,SQL SELECT Statement&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES="BTREE RTREE HASH PRIKEY"
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DATABASE"
+#! GENERATE_FME_BUILD_NUM="15515"
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! MIN_FEATURES=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! COORDSYS=""
+#! MAX_FEATURES=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="Database"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="Table1"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="POSTGRES"
+#! DATASET="$(DestDataset_POSTGRES)"
+#! KEYWORD="POSTGRES_2"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="63"
+#! ATTR_CASE="LOWER"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="postgres_type {FME_GEN_GEOMETRY} postgres_mode INHERIT_FROM_WRITER postgres_sql_key_columns &quot;&quot; postgres_drop_table NO postgres_truncate_table NO postgres_create_with_oids NO postgres_vacuum_analyze NO postgres_allow_serial_writing NO"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_db_operation char(8) fme_text_size float8 fme_where char(254) fme_geometry fme_char(50) fme_rotation float8 fme_text_string char(50) fme_type char(50) fme_color char(50) fme_dataset char(50) fme_primary_axis float8 fme_feature_type char(50) fme_fill_color char(50) fme_start_angle float8 fme_sweep_angle float8 fme_basename char(50) postgres_type char(50) fme_secondary_axis float8"
+#! DEFLINE_PARMS="&quot;GUI CHOICE postgres_drop_table YES%NO Drop Table First&quot; NO &quot;GUI CHOICE postgres_truncate_table YES%NO Truncate Table First&quot; NO &quot;GUI CHOICE postgres_mode INHERIT_FROM_WRITER%INSERT%UPDATE%DELETE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL ATTRLIST_COMMAS postgres_sql_key_columns SQL Key Columns&quot; &quot;&quot; &quot;GUI CHOICE postgres_create_with_oids YES%NO Create With OIDs&quot; NO &quot;GUI CHOICE postgres_vacuum_analyze YES%NO Vacuum Analyze Table&quot; NO &quot;GUI CHOICE postgres_allow_serial_writing YES%NO Allow Serial Column Writing&quot; NO "
+#! ATTR_INDEX_TYPES="BTREE RTREE HASH PRIKEY"
+#! ATTR_NAME_INVALID_CHARS=". %-#[]&quot;()!?*&apos;&amp;+\/"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DATABASE"
+#! GENERATE_FME_BUILD_NUM="15515"
+#! FANOUT_ID_ATTR=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="Database"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="Table1"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bool"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bytea"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_int16"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="numeric(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="numeric(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="serial"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float4"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="money"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_real64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="timetz"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="timestamp"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="timestamptz"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="uuid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="bit(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varbit"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varbit(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bool"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bytea"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_int16"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int2"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int4"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_int64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int8"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="numeric(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="numeric(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="oid"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="serial"
+#! FME_TYPE="fme_int32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float4"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="money"
+#! FME_TYPE="fme_real32"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float8"
+#! FME_TYPE="fme_real64"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timetz"
+#! FME_TYPE="fme_time"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timestamp"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="timestamptz"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="uuid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bit(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varbit"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="POSTGRES"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varbit(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="POSTGRES"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="POSTGRES"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="postgres_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="POSTGRES"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="coagis.coa_leaf_collection_areas_table"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER="coagis"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="postgres_none"
+#! POSITION="-5050.14 -283.594"
+#! BOUNDING_RECT="-5050.14 -283.594 1122.01 71"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="POSTGRES_1"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="pid" ATTR_TYPE="int4,PRIKEY" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="areaid" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="statusid" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collection_label" ATTR_TYPE="varchar(150)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectiondate" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectioncomment" ATTR_TYPE="varchar(8000)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectioneditdate" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectioneditby" ATTR_TYPE="varchar(150)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collection_year" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="edit_date" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="edit_by" ATTR_TYPE="varchar(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgres_sql_where_clause" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgres_sql_statement" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="coagis.coa_leaf_collection_areas_table"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER="coagis"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="2"
+#! FEAT_GEOMTYPE="All"
+#! POSITION="-3470.57 -213.636"
+#! BOUNDING_RECT="-3470.57 -213.636 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="POSTGRES_2"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="pid" ATTR_TYPE="int4,PRIKEY" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="areaid" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="statusid" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collection_label" ATTR_TYPE="varchar(150)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectiondate" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectioncomment" ATTR_TYPE="varchar(8000)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectioneditdate" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collectioneditby" ATTR_TYPE="varchar(150)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="collection_year" ATTR_TYPE="int4" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="edit_date" ATTR_TYPE="timestamp" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="edit_by" ATTR_TYPE="varchar(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgres_allow_serial_writing" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgres_vacuum_analyze" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgres_sql_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="postgres_create_with_oids" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgres_drop_table" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="postgres_truncate_table" PARM_VALUE="YES"/>
+#! <DEFLINE_PARM PARM_NAME="postgres_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_POSTGRES FMT:POSTGRES Connection:"
+#! DEFAULT_VALUE="coa-gis-edit1b"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGRES FMT:POSTGRES Connection:"
+#! DEFAULT_VALUE="coa-gis-warehouse1b"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="3"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_POSTGRES_1,POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_1,POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_1,POSTGRES_IN_BEGIN_SQL_POSTGRES_1,POSTGRES_IN_END_SQL_POSTGRES_1,DestDataset_POSTGRES_2,POSTGRES_OUT_WRITER_MODE_POSTGRES_2,POSTGRES_OUT_START_TRANSACTION_POSTGRES_2,POSTGRES_OUT_TRANSACTION_INTERVAL_POSTGRES_2,POSTGRES_OUT_BULK_COPY_POSTGRES_2,POSTGRES_OUT_BEGIN_SQL_POSTGRES_2,POSTGRES_OUT_END_SQL_POSTGRES_2
+DEFAULT_MACRO SourceDataset_POSTGRES coa-gis-edit1b
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_POSTGRES FMT:POSTGRES Connection:
+DEFAULT_MACRO DestDataset_POSTGRES coa-gis-warehouse1b
+GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGRES FMT:POSTGRES Connection:
+INCLUDE [ if {{$(SourceDataset_POSTGRES)} == {}} { puts_real {Parameter 'SourceDataset_POSTGRES' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_POSTGRES)} == {}} { puts_real {Parameter 'DestDataset_POSTGRES' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE POSTGRES
+READER_KEYWORD POSTGRES_1
+READER_GEN_DIRECTIVES TABLELIST,coagis.coa_water_hydrant_inventory_table,POSTGRES_EXPOSE_FORMAT_ATTRS,,EXPOSE_ATTRS_GROUP,,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,FME_CONNECTION_GROUP,,SCHEMALIST,coagis,_MERGE_SCHEMAS,YES,NAMED_CONNECTION,coa-gis-warehouse1b
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} POSTGRES
+MULTI_WRITER_KEYWORD{0} POSTGRES_2
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POSTGRES_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER POSTGRES POSTGRES_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_POSTGRES_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER POSTGRES POSTGRES_1
+DEFAULT_MACRO SourceDataset_POSTGRES_1 $(SourceDataset_POSTGRES)
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_POSTGRES_1 FMT:POSTGRES Connection:
+DEFAULT_MACRO POSTGRES_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_POSTGRES_1 Yes
+POSTGRES_1_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(POSTGRES_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_POSTGRES_1)"
+DEFAULT_MACRO POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_1 
+POSTGRES_1_EXPOSE_ATTRS_GROUP "$(POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_1)"
+GUI DISCLOSUREGROUP POSTGRES_IN_EXPOSE_ATTRS_GROUP_POSTGRES_1 POSTGRES_EXPOSE_FORMAT_ATTRS Schema Attributes
+DEFAULT_MACRO POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_1 10000
+GUI FLOAT POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_1 Number Of Records To Fetch At A Time:
+POSTGRES_1_FEATURES_PER_FETCH $(POSTGRES_IN_FEATURES_PER_FETCH_POSTGRES_1)
+DEFAULT_MACRO POSTGRES_IN_BEGIN_SQL_POSTGRES_1 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGRES_IN_BEGIN_SQL_POSTGRES_1 SQL Statement to Execute Before Translation:
+POSTGRES_1_BEGIN_SQL "$(POSTGRES_IN_BEGIN_SQL_POSTGRES_1)"
+DEFAULT_MACRO POSTGRES_IN_END_SQL_POSTGRES_1 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGRES_IN_END_SQL_POSTGRES_1 SQL Statement to Execute After Translation:
+POSTGRES_1_END_SQL "$(POSTGRES_IN_END_SQL_POSTGRES_1)"
+POSTGRES_1_DATASET "$(SourceDataset_POSTGRES_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POSTGRES_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER POSTGRES POSTGRES_2
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_POSTGRES_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER POSTGRES POSTGRES_2
+DEFAULT_MACRO DestDataset_POSTGRES_2 $(DestDataset_POSTGRES)
+GUI NAMED_DB_CONNECTION_ENCODED DestDataset_POSTGRES_2 FMT:POSTGRES Connection:
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO POSTGRES_OUT_DESTINATION_DATASETTYPE_VALIDATION_POSTGRES_2 Yes
+POSTGRES_2_DESTINATION_DATASETTYPE_VALIDATION "$(POSTGRES_OUT_DESTINATION_DATASETTYPE_VALIDATION_POSTGRES_2)"
+DEFAULT_MACRO POSTGRES_OUT_WRITER_MODE_POSTGRES_2 INSERT
+GUI CHOICE POSTGRES_OUT_WRITER_MODE_POSTGRES_2 INSERT%UPDATE%DELETE Writer Mode:
+POSTGRES_2_WRITER_MODE $(POSTGRES_OUT_WRITER_MODE_POSTGRES_2)
+DEFAULT_MACRO POSTGRES_OUT_START_TRANSACTION_POSTGRES_2 0
+GUI TEXT POSTGRES_OUT_START_TRANSACTION_POSTGRES_2 Starting Feature:
+POSTGRES_2_START_TRANSACTION $(POSTGRES_OUT_START_TRANSACTION_POSTGRES_2)
+DEFAULT_MACRO POSTGRES_OUT_TRANSACTION_INTERVAL_POSTGRES_2 1000
+GUI TEXT POSTGRES_OUT_TRANSACTION_INTERVAL_POSTGRES_2 Features Per Transaction:
+POSTGRES_2_TRANSACTION_INTERVAL $(POSTGRES_OUT_TRANSACTION_INTERVAL_POSTGRES_2)
+DEFAULT_MACRO POSTGRES_OUT_BULK_COPY_POSTGRES_2 YES
+GUI CHOICE POSTGRES_OUT_BULK_COPY_POSTGRES_2 YES%NO Bulk Copy Insert:
+POSTGRES_2_BULK_COPY $(POSTGRES_OUT_BULK_COPY_POSTGRES_2)
+DEFAULT_MACRO POSTGRES_OUT_BEGIN_SQL_POSTGRES_2 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGRES_OUT_BEGIN_SQL_POSTGRES_2 SQL Statement to Execute Before Translation:
+POSTGRES_2_BEGIN_SQL "$(POSTGRES_OUT_BEGIN_SQL_POSTGRES_2)"
+DEFAULT_MACRO POSTGRES_OUT_END_SQL_POSTGRES_2 
+GUI OPTIONAL TEXT_EDIT_SQL POSTGRES_OUT_END_SQL_POSTGRES_2 SQL Statement to Execute After Translation:
+POSTGRES_2_END_SQL "$(POSTGRES_OUT_END_SQL_POSTGRES_2)"
+POSTGRES_2_DATASET "$(DestDataset_POSTGRES_2)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "C:\jobs\coa_leaf_collection_areas_table.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_POSTGRES_1 POSTGRES_1
+DEFAULT_MACRO DATASET_KEYWORD_POSTGRES_2 POSTGRES_2
+# -------------------------------------------------------------------------
+
+POSTGRES_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME coa_leaf_collection_areas_table
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *       @SupplyAttributes(multi_reader_keyword,POSTGRES_1)    ROUTE POSTGRES POSTGRES_1::coagis.coa_leaf_collection_areas_table TO FME_GENERIC ::coagis.coa_leaf_collection_areas_table ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+POSTGRES_1_MERGE_DEF POSTGRES_1::coagis.coa_leaf_collection_areas_table EXACT coagis.coa_leaf_collection_areas_table DEFLINE postgres_type,postgres_none,postgres_sql_where_clause,,postgres_sql_statement,,pid,int4<comma>PRIKEY,areaid,varchar<openparen>50<closeparen>,statusid,int4,collection_label,varchar<openparen>150<closeparen>,collectiondate,timestamp,collectioncomment,varchar<openparen>8000<closeparen>,collectioneditdate,timestamp,collectioneditby,varchar<openparen>150<closeparen>,collection_year,int4,edit_date,timestamp,edit_by,varchar<openparen>100<closeparen>
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC coagis.coa_leaf_collection_areas_table TO POSTGRES __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>coagis.coa_leaf_collection_areas_table<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+POSTGRES_2_DEF coagis.coa_leaf_collection_areas_table   postgres_type                All   postgres_mode                INHERIT_FROM_WRITER   postgres_sql_key_columns     ""   postgres_drop_table          NO   postgres_truncate_table      YES   postgres_create_with_oids    NO   postgres_vacuum_analyze      NO   postgres_allow_serial_writing NO   pid                          int4,PRIKEY   areaid                       varchar(50)   statusid                     int4   collection_label             varchar(150)   collectiondate               timestamp   collectioncomment            varchar(8000)   collectioneditdate           timestamp   collectioneditby             varchar(150)   collection_year              int4   edit_date                    timestamp   edit_by                      varchar(100)

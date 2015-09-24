@@ -1,0 +1,93 @@
+2015-09-22 16:01:29|   0.0|  0.0|INFORM|FME 2015.1.1.0 (20150715 - Build 15515 - WIN32)
+2015-09-22 16:01:29|   0.0|  0.0|INFORM|FME_HOME is 'C:\FME\'
+2015-09-22 16:01:29|   0.1|  0.0|INFORM|FME Desktop ESRI Edition (floating)
+2015-09-22 16:01:29|   0.1|  0.0|INFORM|Permanent License.
+2015-09-22 16:01:29|   0.1|  0.0|INFORM|Machine host name is: coa-gis-fme1
+2015-09-22 16:01:29|   0.1|  0.0|INFORM|START - ProcessID: 1760, peak process memory usage: 39644 kB, current process memory usage: 39644 kB
+2015-09-22 16:01:29|   0.1|  0.0|INFORM|FME Configuration: Command line arguments are `C:\FME\fme.exe' `C:/Users/mssqlgisadmin/Documents/GitHub/fme-jobs/edit_to_warehouse_table/workbench\wb-xlate-144295208873_7724' `LOG_STANDARDOUT' `YES' `LogCountServerName' `{28335e89-b33d-4f3f-a21c-b12433633a3b}'
+2015-09-22 16:01:29|   0.2|  0.1|INFORM|Shared folders for formats are : C:\FME\datasources;C:\Users\mssqlgisadmin\Documents\FME\Formats
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Shared folders for transformers are : C:\FME\transformers;C:\Users\mssqlgisadmin\AppData\Roaming\Safe Software\FME\FME Store\Transformers;C:\Users\mssqlgisadmin\Documents\FME\Transformers
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\mssqlgisadmin\Documents\FME\CoordinateSystems
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\mssqlgisadmin\Documents\FME\CoordinateSystemExceptions
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\mssqlgisadmin\Documents\FME\CoordinateSystemGridOverrides
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\mssqlgisadmin\Documents\FME\CsmapTransformationExceptions
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\mssqlgisadmin\Documents\FME\TransformerCategories
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Reader Keyword is `POSTGRES_1'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Writer Keyword is `MULTI_WRITER'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `MULTI_WRITER_DEF'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Reader type is `POSTGRES'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Current working folder is `C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\edit_to_warehouse_table\workbench'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\MSSQLG~1\AppData\Local\Temp\2'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: FME_HOME is `C:\FME\'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\Users\mssqlgisadmin\Documents\GitHub\fme-jobs\edit_to_warehouse_table\workbench/'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'coa_sanitation_customers_table.fmw'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2015.1.1.0'
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|System Status: 48.43 GB of disk space available in the FME temporary folder (C:\Users\MSSQLG~1\AppData\Local\Temp\2)
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|System Status: 4.00 GB of virtual memory available
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Operating System: Microsoft Windows Server 2012 R2 Server 4.0 64-bit  (Build 9600)
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Platform: WIN32
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Locale: en_US
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|Code Page: 1252  (ANSI - Latin I)
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Process limits are 3.91 GB of physical memory and 4.00 GB of address space
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Start freeing memory when process usage exceeds 2.34 GB of memory or 3.41 GB of address space
+2015-09-22 16:01:29|   0.2|  0.0|INFORM|FME Configuration: Stop freeing memory when process usage is below 1.76 GB of memory and 2.56 GB of address space
+2015-09-22 16:01:29|   0.3|  0.1|INFORM|Creating writer for format: 
+2015-09-22 16:01:29|   0.4|  0.1|INFORM|FME Configuration: Named Connection Storage: 'C:\Users\mssqlgisadmin\AppData\Roaming\Safe Software\FME'
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|FME Configuration: Using Named Connection values from 'coa-gis-edit1b' for POSTGRES_1
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|Creating reader for format: PostgreSQL
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGRES'
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|Loaded module 'POSTGRES' from file 'C:\FME\plugins/POSTGIS.dll'
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|FME API version of module 'POSTGRES' matches current internal version (3.7 20150407)
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|Opening POSTGRES reader for dataset 'coagisedit'
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|PostgreSQL 9.2.10 on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-11), 64-bit
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|Using MultiWriter $Revision$ ( $Date$ ) with keyword `MULTI_WRITER' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2015-09-22 16:01:29|   0.4|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2015-09-22 16:01:29|   0.5|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\FME\plugins/LogCount_func.dll'
+2015-09-22 16:01:29|   0.5|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (3.7 20150407)
+2015-09-22 16:01:29|   0.5|  0.1|INFORM|Creating writer for format: FME Feature Store (FFS)
+2015-09-22 16:01:29|   0.5|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2015-09-22 16:01:29|   0.5|  0.0|INFORM|Reading POSTGRES table: 'coagis.coa_sanitation_customers_table'...
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|FME Configuration: Using Named Connection values from 'coa-gis-warehouse1-TABLE' for POSTGRES_2
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|Creating writer for format: PostgreSQL
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGRES'
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|FME API version of module 'POSTGRES' matches current internal version (3.7 20150407)
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|FME API version of module 'POSTGRES' matches current internal version (3.7 20150407)
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|Writer `POSTGRES_2' of type `POSTGRES' using group definition keyword `POSTGRES_2_DEF'
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|FME API version of module 'POSTGRES' matches current internal version (3.7 20150407)
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|Opening POSTGRES writer for dataset 'coagiswarehouse'...
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|PostgreSQL 9.2.9 on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-4), 64-bit
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|Testing for the existence of table 'coagis.coa_sanitation_customers_table'...
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|Truncating existing table 'coagis.coa_sanitation_customers_table'...
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|Using existing table 'coagis.coa_sanitation_customers_table'
+2015-09-22 16:01:29|   0.6|  0.0|INFORM|POSTGRES Writer: Creating 'streaming Bulk Copy' feature type processor for feature type 'coagis.coa_sanitation_customers_table'
+2015-09-22 16:01:30|   0.8|  0.2|ERROR |Bulk copy failed on table 'coagis.coa_sanitation_customers_table' using delimiter ':'. Error was 'ERROR:  value too long for type character varying(35)
+CONTEXT:  COPY coa_sanitation_customers_table, line 1, column owner: "CARPENTER JOHN S & CARPENTER SANDRA L"
+'
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |A fatal error has occurred. Check the logfile above for details
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |A fatal error has occurred. Check the logfile above for details
+2015-09-22 16:01:30|   0.8|  0.0|INFORM|Successfully closed POSTGRES database reader
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |POSTGRES reader aborted!
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |A fatal error has occurred. Check the logfile above for details
+2015-09-22 16:01:30|   0.8|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-22 16:01:30|   0.8|  0.0|INFORM|Feature output statistics for `FFS' writer using keyword `W_1':
+2015-09-22 16:01:30|   0.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-22 16:01:30|   0.8|  0.0|STATS |                               Features Written
+2015-09-22 16:01:30|   0.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-22 16:01:30|   0.8|  0.0|STATS |==============================================================================
+2015-09-22 16:01:30|   0.8|  0.0|STATS |Total Features Written                                                       0
+2015-09-22 16:01:30|   0.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |Bulk copy failed on table 'coagis.coa_sanitation_customers_table' using delimiter ':'. Error was 'no COPY in progress
+'
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |A fatal error has occurred. Check the logfile above for details
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |A fatal error has occurred. Check the logfile above for details
+2015-09-22 16:01:30|   0.8|  0.0|INFORM|Successfully closed POSTGRES database reader
+2015-09-22 16:01:30|   0.8|  0.0|INFORM|Successfully closed POSTGRES database reader
+2015-09-22 16:01:30|   0.8|  0.0|ERROR |A fatal error has occurred. Check the logfile above for details
+2015-09-22 16:01:30|   0.8|  0.0|INFORM|FME Session Duration: 0.9 seconds. (CPU: 0.5s user, 0.2s system)
+2015-09-22 16:01:30|   0.8|  0.0|INFORM|END - ProcessID: 1760, peak process memory usage: 64852 kB, current process memory usage: 57048 kB
