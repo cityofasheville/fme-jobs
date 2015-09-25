@@ -82,15 +82,6 @@ close $superBatchFile
 set fmeHome {}
 catch { set fmeHome $::env(FME_HOME)/ }
 
-if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
-  puts $err
-  puts "\nFME encountered an error. Please contact support@safe.com"
-} else {
-  puts "\nTranslation SUCCESSFUL"
-}
-if [ catch { file delete $superBatchFileName } ] {
-  puts "Warning: unable to delete $superBatchFileName"
-}
 
 if [ catch { ${fmeHome}fme COMMAND_FILE $superBatchFileName } err ] {
   puts $err
